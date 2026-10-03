@@ -1,5 +1,0 @@
-dashboard-tutor.html — Painel do tutor
-* Resumo dos animais
-* Próximas consultas
-* Notificações
-* Autorizações

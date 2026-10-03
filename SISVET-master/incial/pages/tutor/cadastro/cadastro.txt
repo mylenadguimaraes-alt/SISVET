@@ -1,3 +1,0 @@
-cadastro.html — Cadastro do tutor
-* Dados pessoais
-* Criação da conta

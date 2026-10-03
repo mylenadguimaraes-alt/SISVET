@@ -1,5 +1,0 @@
-funcionarios.html — Funcionários
-* Recepcionistas
-* Administradores
-* Outros funcionários
-* Permissões

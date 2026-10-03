@@ -1,4 +1,0 @@
-animais.html — Meus animais
-* Lista de animais
-* Adicionar animal
-* Editar animal
