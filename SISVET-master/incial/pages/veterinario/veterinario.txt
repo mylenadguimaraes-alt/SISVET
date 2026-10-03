@@ -1,0 +1,25 @@
+🩺 PESSOA 3 — VETERINÁRIO, CONSULTAS E AGENDA
+
+Responsável pela área onde ocorre o atendimento.
+
+Páginas HTML:
+
+agenda.html — Agenda
+* Consultas do dia
+* Horários
+* Agendamentos
+* Cancelamentos/remarcações
+atendimento.html — Atendimento veterinário
+* Dados do animal
+* Queixa
+* Anamnese
+* Diagnóstico
+* Observações
+* Procedimentos
+* Finalização da consulta
+historico.html — Histórico clínico
+* Consultas anteriores
+* Vacinas
+* Exames
+* Medicamentos
+* Evolução do animal

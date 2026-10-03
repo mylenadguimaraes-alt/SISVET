@@ -1,0 +1,8 @@
+index.html — Página inicial
+* Apresentação do sistema
+* Explicação da proposta
+* Botões de login/cadastro
+login.html — Login
+* E-mail
+* Senha
+* Recuperação de acesso

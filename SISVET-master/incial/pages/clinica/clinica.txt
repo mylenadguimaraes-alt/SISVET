@@ -1,0 +1,25 @@
+PESSOA 2 — CLÍNICA
+
+Responsável pela administração da clínica e dos funcionários.
+
+Páginas HTML:
+
+clinica.html — Dashboard da clínica
+* Resumo
+* Consultas do dia
+* Pacientes
+* Funcionários
+veterinarios.html — Veterinários
+* Lista de veterinários
+* Cadastrar
+* Editar
+* Desativar
+funcionarios.html — Funcionários
+* Recepcionistas
+* Administradores
+* Outros funcionários
+* Permissões
+pacientes.html — Pacientes
+* Animais autorizados
+* Dados básicos
+* Acesso ao prontuário

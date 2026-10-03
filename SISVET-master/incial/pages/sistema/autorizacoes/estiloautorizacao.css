@@ -1,0 +1,287 @@
+html, body{
+    margin: 0 auto;
+}
+
+/*Barra*/
+
+header{
+    width: 100%;
+    background-color: #1351B4;
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+}
+
+header p, 
+header h2,
+header h4,
+header h5{
+    color: #FFFFFF;
+    font-family: arial;
+}
+
+main h1,
+main h3,
+main h4,
+main h5{
+    color: #3D3D3D;
+    font-family: arial;
+}
+
+main p{
+    font-weight: bold;
+    color: #3D3D3D;
+    font-family: arial;
+}
+
+#buttonnotifications{
+    display: flex;
+    flex-direction: column;
+    background-color: #1351B4;
+    border: none;
+    color: #FFFFFF;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#buttonnotifications:hover{
+    background-color: #4a72b4;
+    border-radius: 40px;
+    color: #FFFFFF;
+}
+
+#buttondropbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #1351B4;
+    border: none;
+    color: #FFFFFF;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    font-size: 15px;
+    margin-right: 32px;
+}
+
+#buttondropbar:hover{
+    background-color: #4a72b4;
+    border-radius: 15px;
+    color: #FFFFFF;
+}
+
+/*Body*/
+
+body{
+    background-color: #F5F5F5;
+}
+
+/*Pet*/
+
+#divpet{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(211, 211, 211, 0.700);
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07);
+    padding: 10px;
+    justify-content: center;
+}
+
+#divpet a{
+    text-decoration: none;
+    color: #155BCB;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/*Clínica acesso*/
+
+#clinicascomacesso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 40px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+}
+
+#divclinicaacess{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(211, 211, 211, 0.700);
+    border-radius: 18px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07);
+    padding: 8px;
+}
+
+#divclinicatext{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 10px;
+}
+
+#tableclinica{
+    border: 1px solid rgba(211, 211, 211, 0.700);
+    border-radius: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    padding: 12px 20px;
+    color: #3D3D3D;
+    font-family: arial;
+    text-align: left;
+}
+
+#tableclinica thead{
+    text-align: left;
+    color: #3D3D3D;
+    font-family: arial;
+}
+
+#tableclinica td:nth-child(2) div{
+    background-color: lightgreen;
+    border-radius: 10px;
+    width: 175px;
+    height: 15px;
+    padding: 10px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+#tableclinica td:nth-child(4) button{
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #E63946;
+    width: 175px;
+    height: 30px;
+    font-weight: bold;
+    color: #E63946;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tableclinica td:nth-child(4) button:hover{
+    background-color: #E63946;
+    color: #FFFFFF;
+}
+
+/*solicitações pendentes*/
+
+#solicitacoespendentes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 40px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+}
+
+#divsolicitacoespendentes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(211, 211, 211, 0.700);
+    border-radius: 18px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07);
+    padding: 8px;
+}
+
+#divsolicitacoestext{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 10px;
+}
+
+#tablesolicitacoes{
+    border: 1px solid rgba(211, 211, 211, 0.700);
+    border-radius: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    padding: 12px 15px;
+    color: #3D3D3D;
+    font-family: arial;
+    text-align: left;
+}
+
+
+#tablesolicitacoes thead{
+    text-align: left;
+    color: #3D3D3D;
+    font-family: arial;
+}
+
+#tablesolicitacoes td:nth-child(2) div{
+    background-color: lightgreen;
+    border-radius: 10px;
+    width: 175px;
+    height: 15px;
+    padding: 10px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+#tablesolicitacoes td:nth-child(4) #autorizar{
+    background-color: #155BCB;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#tablesolicitacoes td:nth-child(4) #autorizar:hover{
+    background-color: #FFFFFF;
+    border: 2px solid #155BCB;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+    color: #155BCB;
+    text-align: center;
+}
+
+#tablesolicitacoes td:nth-child(4) #recusar{
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #E63946;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    color: #E63946;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tablesolicitacoes td:nth-child(4) #recusar:hover{
+    background-color: #E63946;
+    border: 2px solid #E63946;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}

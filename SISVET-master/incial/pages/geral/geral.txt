@@ -1,0 +1,10 @@
+PÁGINA GERAL — SISVET
+
+Responsável pela apresentação inicial do sistema e pelo acesso dos diferentes tipos de usuários.
+
+
+Objetivo:
+
+A página inicial deve apresentar o SISVET de forma simples e clara, explicando como o sistema auxilia no gerenciamento das informações dos animais, consultas, documentos, vacinas e autorizações.
+
+O usuário poderá escolher o tipo de acesso desejado ou seguir para a tela de login/cadastro.

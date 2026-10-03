@@ -1,0 +1,6 @@
+historico.html — Histórico clínico
+* Consultas anteriores
+* Vacinas
+* Exames
+* Medicamentos
+* Evolução do animal

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="estiloautorizacao.css">
+    <title>SISVET</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div style="display: flex; flex-direction: row;">
+                    <div style="display:flex; flex-direction: row; align-items: center;">
+                        <i class="fa-solid fa-paw" style="font-size: 50px;"></i>
+                    </div>
+                    <div style=" line-height: 4px;">
+                        <h2>SISVET</h2>
+                        <p>Sistema integrado de Saúde Veterinária</p>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <button id="buttonnotifications" onclick="window,location.href=''">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                    <div style="display: flex; flex-direction: row; align-items: center; margin-left: 8px;">
+                        <img src="img-user-default.webp" alt="default" style="height: 40px; border-radius: 20px;">
+                        <div style="line-height: 1px; margin-right: 8px; margin-left: 4px;">
+                            <h4 class="default-nome-user">default-nome-user</h4>
+                            <h5 class="default-cargo">default-cargo</h5>
+                        </div>
+                        <button id="buttondropbar">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 40px; margin-left: 16px;">
+        <div style="line-height: 8px;">
+            <h1>Autorizações</h1>
+            <p>Gerencie quais clínicas pode gerenciar o prontuário dos seus animais.</p>
+        </div>
+        <section id="sectionanimal">
+            <h1>PETs</h1>
+            <div id="divpet">
+                <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px;">
+                    <div>
+                        <img src="img-user-default.webp" alt="default" style="height: 40px; border-radius: 20px; margin-right: 8px;">
+                    </div>
+                    <div style="line-height: 1px; margin-right: 8px; margin-left: 4px; gap: 0px; margin-top: 0px;">
+                        <h4 class="default-nome-pet" style="margin-bottom: 0px;">default-nome-pet</h4>
+                        <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0px;">
+                            <h5 class="default-raca">default-raca</h5>
+                            <i class="fa-solid fa-minus"></i>
+                            <h5 class="default-ano">default-ano</h5>
+                        </div>
+                        <div>
+                            <a href="">Ver detalhes do animal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clinicascomacesso">
+            <div id="divclinicaacess">
+                <div id="divclinicatext">
+                    <h3>Clínicas com acesso</h3>
+                </div>
+                    <table id="tableclinica">
+                        <thead>
+                            <tr>
+                                <th>Clínica</th>
+                                <th>Status</th>
+                                <th>Desde</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>default-nome-clinica</td>
+                                <td><div>default-status-clinica</div></td>
+                                <td>default-data-de-autorizacao</td>
+                                <td><button>Revogar acesso</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="solicitacoespendentes">
+            <div id="divsolicitacoespendentes">
+                <div id="divsolicitacoestext">
+                    <h3>Solicitações pendentes</h3>
+                </div>
+                    <table id="tablesolicitacoes">
+                        <thead>
+                            <tr>
+                                <th>Clínica</th>
+                                <th>Motivo</th>
+                                <th>Solicitação em</th>
+                                <th>Ações</th>
+                            </tr>
+                         </thead>
+                        <tbody>
+                            <tr>
+                                <td>default-nome-request</td>
+                                <td>
+                                    <div>default-status-request</div>
+                                </td>
+                                <td>default-data-de-request</td>
+                                <td>
+                                    <button id="autorizar">Autorizar</button>
+                                    <button id="recusar">Recusar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="width: 100%; height: 200px; background-color: #1351B4; margin-top: 120px;">
+    </footer>
+</body>
+</html>

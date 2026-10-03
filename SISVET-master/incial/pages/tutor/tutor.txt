@@ -1,0 +1,36 @@
+👤 PESSOA 1 — TUTOR E ANIMAIS
+
+Responsável pela parte utilizada pelo tutor.
+
+Páginas HTML:
+
+index.html — Página inicial
+* Apresentação do sistema
+* Explicação da proposta
+* Botões de login/cadastro
+login.html — Login
+* E-mail
+* Senha
+* Recuperação de acesso
+cadastro.html — Cadastro do tutor
+* Dados pessoais
+* Criação da conta
+dashboard-tutor.html — Painel do tutor
+* Resumo dos animais
+* Próximas consultas
+* Notificações
+* Autorizações
+animais.html — Meus animais
+* Lista de animais
+* Adicionar animal
+* Editar animal
+animal.html — Perfil/prontuário
+* Dados do animal
+* Histórico
+* Consultas
+* Vacinas
+* Exames
+* Medicamentos
+* Documentos
+
+Total: 6 páginas

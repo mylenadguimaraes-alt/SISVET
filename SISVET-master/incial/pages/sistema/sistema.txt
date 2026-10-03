@@ -1,0 +1,25 @@
+PESSOA 4 — AUTORIZAÇÕES, DOCUMENTOS E ADMINISTRAÇÃO
+
+Responsável pelo controle de acesso e administração geral.
+
+Páginas HTML:
+
+autorizacoes.html — Autorizações
+* Clínicas autorizadas
+* Solicitações de acesso
+* Autorizar
+* Recusar
+* Revogar acesso
+documentos.html — Documentos
+* Upload
+* Exames
+* Laudos
+* Comprovantes
+* Documentos de vacinação
+admin.html — Administrador do sistema
+* Clínicas cadastradas
+* Usuários
+* Bloqueios
+* Gerenciamento geral
+
+Total: 3 páginas

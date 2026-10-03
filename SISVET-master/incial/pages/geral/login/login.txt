@@ -1,0 +1,30 @@
+LOGIN — ACESSO AO SISTEMA
+
+Responsável pela autenticação dos usuários antes de acessar as áreas internas do SISVET.
+
+Página:
+login.html — Login
+
+Elementos:
+
+* Campo de e-mail
+* Campo de senha
+* Botão "Entrar"
+* Opção "Esqueci minha senha"
+* Link para cadastro
+* Link para voltar à página inicial
+
+Funcionamento:
+
+O usuário informa seu e-mail e senha para acessar sua conta.
+
+Após a autenticação, o sistema identifica o perfil do usuário e direciona para a área correspondente:
+
+* Tutor → Dashboard do Tutor
+* Veterinário → Agenda/Área do Veterinário
+* Clínica → Dashboard da Clínica
+* Administrador → Área Administrativa
+
+Caso os dados estejam incorretos, o sistema deve informar o erro ao usuário.
+
+Caso o usuário ainda não possua uma conta, poderá acessar a tela de cadastro correspondente ao seu perfil.

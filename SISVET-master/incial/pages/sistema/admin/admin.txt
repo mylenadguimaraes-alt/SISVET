@@ -1,0 +1,5 @@
+admin.html — Administrador do sistema
+* Clínicas cadastradas
+* Usuários
+* Bloqueios
+* Gerenciamento geral

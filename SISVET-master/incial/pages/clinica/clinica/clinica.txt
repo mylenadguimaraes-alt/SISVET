@@ -1,0 +1,5 @@
+clinica.html — Dashboard da clínica
+* Resumo
+* Consultas do dia
+* Pacientes
+* Funcionários

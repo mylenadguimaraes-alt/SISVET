@@ -1,0 +1,8 @@
+atendimento.html — Atendimento veterinário
+* Dados do animal
+* Queixa
+* Anamnese
+* Diagnóstico
+* Observações
+* Procedimentos
+* Finalização da consulta
