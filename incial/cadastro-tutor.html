@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SISVET - Cadastro do Tutor</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylecadastrologin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
 <body>
 <header class="sisvetbr">
-  <span class="sisvetbr">sisvet<span>br</span></span>
+  <span class="sisvet">sisvet<span>br</span></span>
   <span>SISVET</span>
-  <a href="#">Entrar com gov.br</a>
 </header>
 
 <header class="logo">
-  <div class="paw">🐾</div>
+  <div class="paw"><i class="fa-solid fa-paw"></i></div>
   <div>
     <h1>SISVET</h1>
     <p>Sistema Integrado de Saúde Veterinária</p>
@@ -36,7 +36,23 @@
         <div class="row">
           <div class="field"><label>Data de nascimento *</label><input type="date" name="birth_date" required></div>
           <div class="field"><label>Telefone *</label><input type="tel" name="phone" placeholder="(00) 0000-0000" required></div>
+          <div class="field">
+            <label>Sexo *</label>
+            <div style="margin-top: 10px;">
+              <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; flex-direction: row; align-items: center;">
+                    <input type="radio" name="Sexo">
+                    <label for="sexo">feminino</label>
+                  </div>
+                  <div style="display: flex; flex-direction: row; align-items: center;">
+                    <input type="radio" name="Sexo">
+                    <label for="sexo">masculino</label>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
 
         <h3 class="section">Endereço</h3>
         <div class="row">
@@ -73,7 +89,7 @@
     </div>
 
     <aside class="info">
-      <div class="paw">🐾</div>
+      <div class="paw"><i class="fa-solid fa-paw"></i></div>
       <h3>Juntos por uma vida mais saudável.</h3>
       <p>Ao criar sua conta, você terá acesso ao prontuário do seu pet, às clínicas autorizadas e a todas as informações importantes sobre a saúde dele.</p>
     </aside>
