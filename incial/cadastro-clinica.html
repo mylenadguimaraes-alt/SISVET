@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VetSaúde - Cadastro da Clínica</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="sisvetbr">
+  <span class="sisvet">sisvet<span>br</span></span>
+  <span>Ministério da Saúde</span>
+  <a href="#">Entrar com gov.br</a>
+</header>
+
+<header class="logo">
+  <div class="paw">🐾</div>
+  <div>
+    <h1>VetSaúde</h1>
+    <p>Sistema Integrado de Saúde Veterinária</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="form">
+      <h2>Crie sua conta</h2>
+      <p class="subtitle"><a href="cadastro.html">← Voltar para escolha</a></p>
+
+      <form action="#" method="post">
+        <h3 class="section">Dados da clínica</h3>
+        <div class="row">
+          <div class="field"><label>Razão social *</label><input type="text" name="legal_name" placeholder="Razão social" required></div>
+          <div class="field"><label>Nome da clínica *</label><input type="text" name="trade_name" placeholder="Nome fantasia" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>E-mail *</label><input type="email" name="email" placeholder="Digite o e-mail" required></div>
+          <div class="field"><label>Telefone *</label><input type="tel" name="phone" placeholder="(00) 0000-0000" required></div>
+        </div>
+
+        <h3 class="section">Endereço</h3>
+        <div class="row">
+          <div class="field"><label>CEP *</label><input type="text" name="cep" placeholder="00000-000" required></div>
+          <div class="field"><label>Endereço *</label><input type="text" name="street" placeholder="Digite o endereço" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Número *</label><input type="text" name="number" placeholder="000" required></div>
+          <div class="field"><label>Complemento</label><input type="text" name="complement" placeholder="Apto, bloco, etc."></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Bairro</label><input type="text" name="neighborhood"></div>
+          <div class="field"><label>Cidade</label><input type="text" name="city"></div>
+          <div class="field"><label>Estado</label><input type="text" name="state" maxlength="2"></div>
+        </div>
+
+        <h3 class="section">Documentos</h3>
+        <div class="row">
+          <div class="field"><label>CNPJ *</label><input type="text" name="cnpj" placeholder="00.000.000/0000-00" required></div>
+          <div class="field"><label>Documento de licença *</label><input type="file" name="license_document" required></div>
+        </div>
+
+        <h3 class="section">Conta</h3>
+        <div class="field"><label>Senha *</label><input type="password" name="password" required></div>
+
+        <button class="btn" type="submit">Criar conta da clínica</button>
+      </form>
+    </div>
+
+    <aside class="info">
+      <div class="paw">🐾</div>
+      <h3>Juntos por uma vida mais saudável.</h3>
+      <p>Cadastre sua clínica para gerenciar profissionais, atendimentos e documentos.</p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <span>sisvetbr</span>
+  <span>© 2026 - SISVET. Todos os direitos reservados.</span>
+  <span>Acessibilidade &nbsp; Termos de uso &nbsp; Privacidade</span>
+</footer>
+</body>
+</html>
