@@ -62,8 +62,13 @@ body{background:var(--bg);color:var(--text)}
 .info p{font-size:14px;line-height:1.5;color:#3A4E60}
 .info .paw{background:var(--blue)}
 
-
-footer{background:var(--blue);color:#fff;display:flex;justify-content:space-between;padding:16px 24px;font-size:13px;gap:16px}
+.rodape{background:#12295D; color:#fff; padding:20px 32px; display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif;}
+.rodape-esq{display:flex; align-items:center; gap:14px}
+.brand-footer strong{display:block; font-size:13px}
+.brand-footer span{font-size:10px; color:#A9B9D1}
+.rodape-links{font-size:11px; color:#A9B9D1; display:flex; gap:10px; justify-content: right;}
+.rodape-links a{color:#A9B9D1; text-decoration:none}
+.copy { color: #b9d0f0; font-size: 11px; }
 
 @media(max-width:800px){
   .container{flex-direction:column}

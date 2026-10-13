@@ -1,0 +1,384 @@
+/* ==================================================
+   VARIÁVEIS GLOBAIS (:root)
+   Origem: Todos os arquivos.
+   Função: Centralizar paleta de cores do sistema.
+   Nota: Variáveis conflitantes foram renomeadas para evitar sobrescritas.
+   ================================================== */
+:root {
+    /* Paleta Home (style.css) e Padrão */
+    --azul: #1351B4;
+    --azul-escuro: #12295D;
+    --azul-claro-home: #E3F0FF;
+    --bg-home: #F0F7FF;
+
+    /* Paleta Cadastro (stylecadastro.css) */
+    --blue: #1E5AA8;
+    --blue-dark: #16487F;
+    --blue-deep: #0F2F5E;
+    --green: #3EBB7A;
+    --yellow: #F7CE3D;
+    --bg-cadastro: #EEF2FA;
+    --bg-light: #F8FAFE;
+    --text: #101F3A;
+    --muted: #5B6B7A;
+    --border: #D8DEE6;
+    --white: #FFFFFF;
+
+    /* Paleta Login e Gov (stylelogin.css) */
+    --azul-gov: #1f52c0;
+    --azul-escuro-login: #123064;
+    --azul-claro-login: #eaf1fb;
+    --azul-botao: #1351b4;
+    --azul-link: #1351b4;
+    --azul-borda: #c5d6ef;
+    --verde-login: #3fc47b;
+    --amarelo-login: #ffd94d;
+    --texto-login: #2c3440;
+    --cinza-login: #5a6b7f;
+}
+
+/* ==================================================
+   RESET E CONFIGURAÇÕES GERAIS (BODY)
+   Origem: Todos os arquivos.
+   Função: Zerar margens e configurar fontes e fundos.
+   Nota: Uso do seletor :has() para aplicar fundos e 
+   layouts específicos sem precisar mexer nas classes do HTML.
+   ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo padrão (Home, Admin, Autorização e Documentos) */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F5F5F5;
+    color: #3D3D3D;
+}
+
+/* Override para a página de Cadastro */
+body:has(.form) {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-cadastro);
+    color: var(--text);
+}
+
+/* Override para a página de Login */
+body:has(.btn-entrar-gov) {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--azul-claro-login);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Override de tipografia para Área Logada (Adm, Doc, Auth) */
+body:has(header) {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0 auto;
+}
+
+/* ==================================================
+   RODAPÉ COMPARTILHADO GERAL
+   Origem: style.css, stylecadastro.css, estiloadm.css...
+   Aplicação: Home, Cadastro, Painéis.
+   Função: Footer padrão do sistema.
+   ================================================== */
+.rodape {
+    background: #12295D;
+    color: #fff;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+.rodape-esq { display: flex; align-items: center; gap: 14px; }
+.brand-footer strong { display: block; font-size: 13px; }
+.brand-footer span { font-size: 10px; color: #A9B9D1; }
+.rodape-links { font-size: 11px; color: #A9B9D1; display: flex; gap: 10px; justify-content: right; }
+.rodape-links a { color: #A9B9D1; text-decoration: none; }
+.copy { color: #b9d0f0; font-size: 11px; }
+
+/* Override exclusivo do Rodapé do Login */
+body:has(.btn-entrar-gov) .rodape {
+    background: var(--azul-gov);
+    padding: 12px 30px;
+    font-size: 13px;
+}
+body:has(.btn-entrar-gov) .rodape div:first-child { display: flex; align-items: center; gap: 10px; }
+.links { display: flex; gap: 15px; }
+.links a { color: white; text-decoration: none; font-size: 12px; }
+
+/* ==================================================
+   BOTÕES COMPARTILHADOS & ESPECÍFICOS
+   Origem: style.css e stylecadastro.css
+   Nota: Classes `.btn` tinham conflito visual. Separadas por contexto.
+   ================================================== */
+.btn { cursor: pointer; text-decoration: none; }
+
+/* Botões da Home */
+body:has(.hero) .btn {
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1.5px solid var(--azul);
+}
+body:has(.hero) .btn:hover { background-color: #0062ff; border-color: #0062ff; }
+.btn-outline { background: #155BCB; color: #FFFFFF; }
+.btn-solid { background: #155BCB; color: #FFFFFF; }
+.btn-lg { padding: 13px 20px; display: inline-flex; align-items: center; gap: 8px; }
+
+/* Botões do Cadastro */
+body:has(.form) .btn {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+body:has(.form) .btn:hover { background: var(--blue-dark); }
+
+/* ==================================================
+   TOPO (HOME)
+   Origem: style.css
+   Aplicação: Landing Page.
+   ================================================== */
+.topo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E9EEF5;
+    background: #1351B4;
+}
+.topo-esq { display: flex; align-items: center; gap: 14px; }
+.divisor { width: 1px; height: 32px; background: #DDE3ED; }
+.brand strong { display: block; font-size: 14px; line-height: 1; color: white; }
+.brand span { font-size: 11px; color: #FFFFFF; }
+.menu { display: flex; gap: 22px; }
+.menu a { font-size: 13px; color: #FFFFFF; text-decoration: none; padding: 20px 2px; border-bottom: 3px solid transparent; }
+.menu a.ativo { color: #FFFFFF; border-bottom-color: #FFFFFF; font-weight: 600; }
+.topo-dir { display: flex; align-items: center; gap: 10px; margin-right: 16px; }
+.icon-busca { background: none; border: none; font-size: 20px; cursor: pointer; color: white; }
+
+/* ==================================================
+   TOPO (LOGIN)
+   Origem: stylelogin.css
+   Aplicação: Tela de Login
+   ================================================== */
+body:has(.btn-entrar-gov) .topo { background: var(--azul-gov); color: white; }
+.logo-sisvet { font-size: 26px; font-weight: 800; }
+.btn-entrar-gov {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    background: rgba(255,255,255,0.12);
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+/* ==================================================
+   HOME - HERO E FEATURES
+   Origem: style.css
+   Aplicação: Landing Page
+   ================================================== */
+.hero { display: grid; grid-template-columns: 480px 1fr; background: linear-gradient(180deg, #F2F8FF 0%, #E8F3FF 100%); min-height: 520px; overflow: hidden; }
+.hero-texto { padding: 56px 0 40px 56px; }
+.badge { background: #D9E9FF; color: var(--azul); font-size: 11px; font-weight: 700; padding: 7px 12px; border-radius: 999px; display: inline-flex; gap: 6px; }
+.hero-texto h1 { font-size: 62px; font-weight: 800; margin: 18px 0 10px; color: #0F2D5E; }
+.hero-texto h2 { font-size: 26px; font-weight: 500; line-height: 1.2; max-width: 380px; }
+.hero-texto p { font-size: 14px; color: #3D3D3D; line-height: 1.6; margin: 18px 0 26px; max-width: 420px; }
+.botoes { display: flex; gap: 12px; }
+
+.hero-imagem { position: relative; display: flex; align-items: end; justify-content: center; }
+.hero-imagem img { position: relative; z-index: 3; width: 680px; max-width: 100%; height: auto; object-fit: contain; margin-bottom: 0; }
+.shape-azul { position: absolute; right: -10%; top: 5%; width: 75%; height: 85%; background: #1351B4; border-radius: 60px 0 0 60px; transform: skewX(-18deg); z-index: 1; }
+.shape-verde { position: absolute; right: 25%; top: 35%; width: 40%; height: 60%; background: #4BC47A; border-radius: 40px; transform: skewX(-18deg); z-index: 2; opacity: 0.9; }
+.shape-amarelo { position: absolute; right: -5%; bottom: 5%; width: 35%; height: 35%; background: #FFD84D; clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%); z-index: 2; }
+.selo { position: absolute; right: 28px; top: 70px; z-index: 4; display: flex; gap: 10px; align-items: center; text-align: left; font-weight: 700; color: #FFFFFF; line-height: 1.1; }
+.selo-ico { width: 40px; height: 40px; border: 1.5px solid #0F2D5E; border-radius: 12px; display: grid; place-items: center; font-size: 14px; }
+
+.features { background: #F7F9FC; padding: 48px 56px 60px; text-align: center; }
+.features h3 { font-size: 22px; margin-bottom: 38px; color: #12295D; }
+.grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; text-align: left; }
+.circulo { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; margin-bottom: 14px; }
+.circulo.verde, .circulo.azul, .circulo.roxo, .circulo.amarelo { background: #1351B4; color: white; }
+.card h4 { font-size: 14px; margin-bottom: 8px; }
+.card p { font-size: 12.5px; color: #3D3D3D; line-height: 1.5; }
+
+/* ==================================================
+   CADASTRO
+   Origem: stylecadastro.css
+   Aplicação: Páginas de registro
+   ================================================== */
+.sisvetbr { background: var(--blue); color: #fff; display: flex; align-items: center; gap: 12px; padding: 12px 24px; font-size: 14px; }
+.sisvetbr .sisvet { font-weight: bold; font-size: 18px; }
+.sisvetbr .sisvet span { color: #BFD9F5; }
+.sisvetbr a { margin-left: auto; color: #fff; text-decoration: none; }
+
+.logo { display: flex; align-items: center; gap: 12px; padding: 18px 24px; background: var(--white); border-bottom: 1px solid var(--border); }
+.logo h1 { font-size: 22px; color: var(--blue-deep); }
+.logo p { font-size: 13px; color: var(--muted); }
+.paw { background: var(--blue); color: #fff; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+
+.container { display: flex; gap: 24px; padding: 24px; max-width: 1100px; margin: 0 auto; }
+.form { flex: 1; background: var(--white); padding: 24px; border-radius: 10px; border: 1px solid var(--border); }
+.form h2 { color: var(--blue-deep); font-size: 22px; }
+.subtitle { margin: 8px 0 16px; color: var(--muted); }
+.subtitle a { color: var(--blue); }
+
+.section { margin: 22px 0 12px; color: var(--blue); font-size: 15px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+
+.row { display: flex; gap: 16px; margin-bottom: 12px; }
+.field { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: bold; }
+.field input, .field select { padding: 10px; border: 1px solid var(--border); border-radius: 6px; }
+.field input:focus, .field select:focus { outline: 2px solid #BFD9F5; border-color: var(--blue); }
+
+.choice { display: flex; flex-direction: column; gap: 16px; }
+.card-choice { border: 1px solid var(--border); border-radius: 10px; padding: 18px; text-decoration: none; color: var(--text); display: block; background: #fff; }
+.card-choice h3 { color: var(--blue-deep); }
+.card-choice p { margin: 8px 0 12px; color: var(--muted); }
+.card-choice:hover { border-color: var(--blue); }
+.back { margin-top: 16px; text-align: center; }
+
+.info { width: 260px; background: #E3EEF9; padding: 20px; border-radius: 10px; color: var(--blue-deep); height: fit-content; }
+.info h3 { margin: 12px 0; }
+.info p { font-size: 14px; line-height: 1.5; color: #3A4E60; }
+.info .paw { background: var(--blue); }
+
+/* ==================================================
+   LOGIN
+   Origem: stylelogin.css
+   Aplicação: Tela de Entrada Gov/Sisvet
+   ================================================== */
+body:has(.btn-entrar-gov) .container { display: flex; flex: 1; align-items: center; justify-content: center; padding: 30px; }
+.card { background: white; padding: 30px 35px; box-shadow: 0 4px 20px rgba(19,81,180,0.08); width: 420px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; z-index: 2; }
+.logo-area { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.icone-pata { background: var(--azul-gov); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.icone-pata svg { width: 28px; }
+.logo-area h1 { color: var(--azul-escuro-login); font-size: 22px; line-height: 1; font-weight: 800; }
+.logo-area p { color: var(--cinza-login); font-size: 11px; }
+
+.card h2 { color: var(--azul-escuro-login); font-size: 20px; margin-bottom: 18px; font-weight: 800; }
+.card label { display: block; font-size: 13px; font-weight: 600; color: var(--texto-login); margin: 12px 0 4px; }
+.card input[type="email"], .card input[type="password"] { width: 100%; padding: 10px 12px; border: 1px solid var(--azul-borda); border-radius: 6px; outline: none; font-size: 14px; background: #fff; }
+.card input:focus { border-color: var(--azul-botao); }
+
+.campo-senha { position: relative; }
+.olho { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; background-color: white; border: none; line-height: 5px; }
+.olho:hover { background-color: rgb(201, 201, 201); border-radius: 9px; }
+
+.opcoes { display: flex; justify-content: space-between; align-items: center; margin: 14px 0; font-size: 13px; }
+.lembrar { display: flex; align-items: center; gap: 6px; font-weight: normal; margin: 0; }
+.opcoes a { color: var(--azul-link); text-decoration: none; }
+
+.btn-entrar { width: 100%; background: var(--azul-botao); color: white; border: none; padding: 13px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; }
+.btn-entrar:hover { background: #0e45a1; }
+
+.divisor-login { text-align: center; margin: 16px 0; border-bottom: 1px solid var(--azul-borda); line-height: 0.1em; color: #999; font-size: 13px; }
+.divisor-login span { background: white; padding: 0 10px; }
+
+.btn-gov { width: 100%; background: white; border: 1.5px solid var(--azul-borda); padding: 11px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-weight: 600; color: var(--azul-escuro-login); }
+.cadastro { text-align: center; margin-top: 18px; font-size: 13px; color: var(--cinza-login); }
+.cadastro a { color: var(--azul-link); text-decoration: none; }
+
+.lado-direito { background: var(--azul-gov); width: 420px; min-height: 437px; border-radius: 0 8px 8px 0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 30px; }
+.texto-promo { text-align: center; z-index: 2; color: white; }
+.texto-promo h3 { color: white; font-size: 26px; font-weight: 800; margin-bottom: 15px; }
+.texto-promo p { color: #dbe7f5; font-size: 14px; line-height: 1.6; }
+.pata-fundo { position: absolute; font-size: 90px; opacity: 0.2; }
+.pata-1 { top: 40px; left: 70px; transform: rotate(-20deg); font-size: 60px; }
+.pata-2 { bottom: 40px; right: 50px; }
+
+/* ==================================================
+   ÁREA LOGADA: ADMIN, AUTORIZAÇÃO E DOCUMENTOS
+   Origem: estiloadm.css, estiloautorizacao.css, estilodocumentos.css
+   Função: Estrutura padrão dos painéis internos.
+   ================================================== */
+header { width: 100%; background-color: #1351B4; color: #FFFFFF; position: sticky; top: 0; }
+header p, header h2, header h4, header h5 { color: #FFFFFF; font-family: arial; }
+main { margin-left: 16px; margin-right: 16px; }
+body:has(.buttonsdocument) main { height: 100vh; } /* Altura especifica da tela de documentos */
+
+main h1, main h3, main h4, main h5 { color: #3D3D3D; font-family: arial; }
+main p { font-weight: bold; color: #3D3D3D; font-family: arial; }
+
+/* Componentes de Header do Admin */
+#buttonnotifications { display: flex; flex-direction: column; background-color: #1351B4; border: none; color: #FFFFFF; height: 40px; width: 40px; justify-content: center; align-items: center; line-height: 40px; font-size: 20px; }
+#buttonnotifications:hover { background-color: #4a72b4; border-radius: 40px; color: #FFFFFF; }
+#buttondropbar { display: flex; flex-direction: column; background-color: #1351B4; border: none; color: #FFFFFF; height: 30px; width: 30px; justify-content: center; align-items: center; line-height: 30px; font-size: 15px; margin-right: 32px; }
+#buttondropbar:hover { background-color: #4a72b4; border-radius: 15px; color: #FFFFFF; }
+
+/* Cards de Pet - Variações por página tratadas via :has() */
+#divpet { display: flex; flex-direction: row; align-items: center; border: 1px solid rgba(211, 211, 211, 0.700); border-radius: 10px; box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07); padding: 10px; justify-content: center; height: 100px; }
+body:has(.div-status) #divpet { width: 300px; } /* Tela Admin */
+body:has(.buttonsdocument) #divpet { width: 100%; justify-content: flex-start; } /* Tela Documentos */
+body:not(:has(.div-status)):not(:has(.buttonsdocument)) #divpet { width: 250px; } /* Tela Autorização */
+
+#divpet a { text-decoration: none; color: #155BCB; font-family: arial; font-size: 11px; font-weight: bold; }
+body:has(.buttonsdocument) #divpet a { font-size: 13px; } 
+
+.div-status { margin-top: 40px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(211, 211, 211, 0.700); padding: 10px; border-radius: 20px; }
+.div-icons { height: 60px; width: 60px; border-radius: 35px; margin-right: 8px; background-color: #12295D; color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+.div-icons.azul { background-color: #1351B4; }
+.div-icons.roxo { background-color: rebeccapurple; }
+.div-icons.laranja { background-color: orange; }
+
+/* Tabelas e Layouts de Listagem */
+#clinicascomacesso, #solicitacoespendentes { display: flex; flex-direction: row; align-items: center; justify-content: left; margin-top: 40px; margin-right: 16px; margin-bottom: 40px; }
+#divclinicaacess, #divsolicitacoespendentes { width: 100%; height: auto; display: flex; flex-direction: column; border: 1px solid rgba(211, 211, 211, 0.700); border-radius: 18px; box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07); padding: 8px; }
+#divclinicatext, #divsolicitacoestext { display: flex; flex-direction: row; text-align: left; padding: 10px; }
+
+#tableclinica, #tablesolicitacoes { border: 1px solid rgba(211, 211, 211, 0.700); border-radius: 10px; box-shadow: 0 0px 12px rgba(0, 0, 0, 0.07); width: 100%; padding: 12px 20px; color: #3D3D3D; font-family: arial; text-align: left; }
+#tablesolicitacoes { padding: 12px 15px; }
+#tableclinica thead, #tablesolicitacoes thead { text-align: left; color: #3D3D3D; font-family: arial; }
+
+/* Status verde na tabela */
+#tableclinica td:nth-child(2) div, #tablesolicitacoes td:nth-child(2) div, #board td:nth-child(3) div { background-color: lightgreen; border-radius: 10px; width: 175px; height: 15px; padding: 10px; font-weight: bold; color: green; text-align: center; }
+
+/* Botões da Tabela */
+#tableclinica td:nth-child(4) button, #tablesolicitacoes td:nth-child(4) #recusar { background-color: white; border-radius: 10px; border: 2px solid #E63946; width: 175px; height: 30px; font-weight: bold; color: #E63946; text-align: center; }
+#tablesolicitacoes td:nth-child(4) #recusar { width: 100px; height: 40px; }
+#tableclinica td:nth-child(4) button:hover, #tablesolicitacoes td:nth-child(4) #recusar:hover { background-color: #E63946; color: #FFFFFF; }
+
+#tablesolicitacoes td:nth-child(4) #autorizar { background-color: #155BCB; border: none; border-radius: 10px; width: 100px; height: 40px; padding: 10px; font-weight: bold; color: #FFFFFF; text-align: center; }
+body:has(.div-status) #tablesolicitacoes td:nth-child(4) #autorizar { width: 150px; } /* Admin override */
+#tablesolicitacoes td:nth-child(4) #autorizar:hover { background-color: #FFFFFF; border: 2px solid #155BCB; color: #155BCB; }
+
+/* Tabela Board (Admin e Docs) */
+#board { width: 100%; margin-top: 40px; overflow: auto; border-radius: 8px; background-color: #FFFFFF; border-collapse: collapse; }
+#board thead { width: 100%; color: #3D3D3D; font-family: arial; font-weight: bold; }
+thead tr { border-bottom: 1px solid #3d3d3d0c; }
+thead th { padding: 10px; background-color: #1351B4; color: #FFFFFF; text-align: left; }
+thead th:first-child { border-top-left-radius: 10px; }
+thead th:last-child { border-top-right-radius: 10px; }
+tbody td { padding: 10px; color: #3D3D3D; font-family: arial; }
+
+.buttonaction { background: #FFFFFF; border: none; color: #155BCB; width: 40px; height: 40px; font-size: 20px; border-radius: 20px; }
+.buttonaction:hover { background-color: #F5F5F5; }
+
+/* Botões da página de Documentos */
+.buttonsdocument { background-color: #155BCB; border: none; border-radius: 10px; width: 100px; height: 40px; padding: 10px; font-weight: bold; color: #FFFFFF; text-align: center; }
+.buttonsdocument:hover { background-color: #FFFFFF; border: 2px solid #155BCB; color: #155BCB; }
+
+/* ==================================================
+   RESPONSIVIDADE GERAL
+   Origem: stylecadastro.css
+   ================================================== */
+@media(max-width: 800px) {
+  .container { flex-direction: column; }
+  .info { width: 100%; }
+  .row { flex-direction: column; }
+  footer { flex-direction: column; }
+}
