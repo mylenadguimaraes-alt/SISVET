@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <span class="icone-logo"><img src="logo.png" alt="" height="40px"></span>
+            <span>VetSaúde</span>
+        </div>
+        <details class="perfil">
+            <summary>
+                <img  src="avatar.jpg" alt="sua foto">
+                <span>default-name</span>
+            </summary>
+            <div class="menu-perfil">
+                <a href="#">Meu Perfil</a>
+                <a href="#">Sair</a>
+            </div>
+        </details>
+    </header>
+    <aside class="sidebar">
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="#"><i class="fa-solid fa-paw"></i>Meus animais</a></li>
+                <li><a href="#"><i class="fa-solid fa-clipboard-check"></i> Autorizações</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Documentos</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="fa-solid fa-door-open"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="conteudo">
+        <h1>Meu Painel</h1>
+        <p>Aqui você encontra informações de saúde de seus animais e das próximas atividades.</p>
+        <div class="cartoes">
+            <div class="card">
+                <div class="icone verde"><i class="fa-solid fa-paw"></i></div>
+                <h2>Meus animais</h2>
+                <strong>#</strong>
+            </div>
+            <div class="card">
+                <div class="icone azul"><i class="fa-solid fa-calendar-days"></i>​</div>
+                <h2>Próximas consultas</h2>
+                <strong>#</strong>
+            </div>
+            <div class="card">
+                <div class="icone amarelo"><i class="fa-regular fa-bell"></i></div>
+                <h2>Notificações</h2>
+                <strong>#</strong>
+            </div>
+            <div class="card">
+                <div class="icone roxo"><i class="fa-solid fa-shield-halved"></i></div>
+                <h2>Autorizações</h2>
+                <strong>#</strong>
+            </div>
+        </div>
+        <section class="proximas-consultas">
+            <div class="cabecalho-secao">
+                <h2>Próximas consultas</h2>
+                <a href="#">Ver todas</a>
+            </div>
+            <div class="lista-consultas">
+                <article class="consulta">
+                    <img src="foto-cachorro.jpg" alt="Foto do animal">
+                    <div class="info">
+                        <h3>Nome do animal</h3>
+                        <p>tipo de consulta</p>
+                        <p>Data e hora</p>
+                        <p>clinica</p>
+                    </div>
+                    <a href="#" class="botao">Ver detalhes</a>
+                </article>
+                <article class="consulta">
+                    <img src="foto-gato.jpg" alt="Foto do animal">
+                    <div class="info">
+                        <h3>Nome do animal</h3>
+                        <p>tipo de consulta</p>
+                        <p>Data e hora</p>
+                        <p>clinica</p>
+                    </div>
+                    <a href="#" class="botao">Ver detalhes</a>
+                </article>
+            </div>
+        </section>
+        <section class="notificacoes">
+            <div class="cabecalho-secao">
+                <h2>Notificações</h2>
+                <a href="#">Ver todas</a>
+            </div>
+            <div class="lista-notificacoes">
+                <article class="notificacao">
+                    <div class="icone-notificacoes"><i class="fa-regular fa-bell" style="color: black;"></i> Clinica solicitou acesso ao prontuário do animal</div>
+                    <p>dia e hora</p>
+                </article>
+                <article class="notificacao">
+                    <div class="icone-notificacoes"><i class="fa-regular fa-bell" style="color: black;"></i> lembrete de consulta do animal</div>
+                    <p>dia e hora</p>
+                </article>
+            </div>
+        </section>
+        <section class="acesso-rapido">
+            <div class="cabecalho-secao">
+                <h2>Acesso rápido</h2>
+                <div style="display: flex; margin-top: 20px;">
+                    <p>Adicionar animal</p>
+                    <p>Ver todos os animais</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="rodape-esquerda">
+            <strong>sisvet.br</strong>
+            <span>© 2026 - VetSaúde. Todos os direitos reservados.</span>
+        </div>
+        <div class="rodape-direita">
+            <a href="#">Acessibilidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Privacidade</a>
+        </div>
+    </footer>
+</body>
+</html>
