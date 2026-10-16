@@ -81,6 +81,10 @@ body{
     background-color: #F5F5F5;
 }
 
+main{
+    height: 100vh;
+}
+
 #divpet{
     display: flex;
     flex-direction: row;
@@ -179,3 +183,11 @@ tbody td{
 .buttonaction:hover{
     background-color: #F5F5F5;
 }
+
+.rodape{background:#12295D; color:#fff; padding:20px 32px; display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif;}
+.rodape-esq{display:flex; align-items:center; gap:14px}
+.brand-footer strong{display:block; font-size:13px}
+.brand-footer span{font-size:10px; color:#A9B9D1}
+.rodape-links{font-size:11px; color:#A9B9D1; display:flex; gap:10px; justify-content: right;}
+.rodape-links a{color:#A9B9D1; text-decoration:none}
+.copy { color: #b9d0f0; font-size: 11px; }

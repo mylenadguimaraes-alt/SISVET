@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SISVET - Histórico Clínico</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="carregarHistorico()">
+
+    <header>
+        <h1>SISVET | Saúde Veterinária</h1>
+        <nav>
+            <a href="agenda.html">Agenda</a>
+            <a href="atendimento.html">Atendimento</a>
+            <a href="historico.html">Histórico</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Histórico Clínico do Animal</h2>
+
+        <h3>Consultas Realizadas</h3>
+        
+        <ul id="lista" style="list-style: none; padding: 0;">
+        </ul>
+
+        <br>
+        <button style="background-color: #dc3545;" onclick="limpar()">Limpar Histórico</button>
+    </div>
+
+    <footer>
+        <p>SISVET - Sistema Integrado de Saúde Veterinária &copy; 2026</p>
+    </footer>
+
+    <script>
+        function carregarHistorico() {
+            var lista = document.getElementById("lista");
+            var historico = JSON.parse(localStorage.getItem("historicoConsultas"));
+
+            lista.innerHTML = "";
+
+            if (historico == null || historico.length == 0) {
+                lista.innerHTML = "<li>Nenhum atendimento registrado ainda.</li>";
+                return;
+            }
+
+            for (var i = 0; i < historico.length; i++) {
+                var c = historico[i];
+                var item = document.createElement("li");
+
+                item.style.marginBottom = "15px";
+                item.style.padding = "10px";
+                item.style.borderBottom = "1px solid #ccc";
+
+                var h = c.horario ? c.horario : "Não informado";
+                var o = c.obs ? c.obs : "Nenhuma";
+
+                item.innerHTML = "<b>Pet:</b> " + c.nome + " | <b>Data:</b> " + c.data + " | <b>Horário:</b> " + h + "<br>" +
+                                 "<b>Queixa:</b> " + c.queixa + "<br>" +
+                                 "<b>Diagnóstico:</b> " + c.diagnostico + "<br>" +
+                                 "<b>Observações:</b> " + o + "<br>";
+
+                lista.appendChild(item);
+            }
+        }
+
+        function limpar() {
+            if (confirm("Tem certeza que deseja apagar o histórico?")) {
+                localStorage.removeItem("historicoConsultas");
+                carregarHistorico();
+            }
+        }
+    </script>
+
+</body>
+</html>

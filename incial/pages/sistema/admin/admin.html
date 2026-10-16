@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SISVET - ADMIN</title>
+        <link rel="stylesheet" href="estiloadm.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        <link rel="icon" href="logo.png">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="display:flex; flex-direction: row; align-items: center;">
+                            <img style="height: 60px;" src="logo.png" alt="SISVET">
+                        </div>
+                        <div style=" line-height: 2px;">
+                            <h2>SISVET</h2>
+                            <p style="font-weight: bold;">Sistema integrado de Saúde Veterinária</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <button id="buttonnotifications" onclick="window,location.href=''">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div style="display: flex; flex-direction: row; align-items: center; margin-left: 8px;">
+                            <img src="img-user-default.webp" alt="default" style="height: 40px; border-radius: 20px;">
+                            <div style="line-height: 1px; margin-right: 8px; margin-left: 4px;">
+                                <h4 class="default-nome-user">default-nome-user</h4>
+                                <h5 class="default-cargo">default-cargo</h5>
+                            </div>
+                            <button id="buttondropbar">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="div-status">
+                <div style="display: flex; align-items: center; margin-bottom: 20px; margin-left: 8px;">
+                    <div class="div-icons" style="height: 50px; width: 50px;">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h2 style="color: #12295D; font-weight: 800; font-family: arial;">STATUS</h2>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <section id="sectioncredenciados">
+                        <div id="divpet">
+                            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px;">
+                                <div class="div-icons azul-marinho">
+                                    <i class="fa-regular fa-hospital"></i>
+                                </div>
+                                <div style="line-height: 1px; margin-right: 8px; margin-left: 4px; gap: 0px; margin-top: 0px;">
+                                    <h4 class="default-nome-pet" style="margin-bottom: 0px;">Número de Credenciados</h4>
+                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0px;">
+                                        <h3 class="default-raca">#</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sectionusers">
+                        <div id="divpet">
+                            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px;">
+                                <div class="div-icons roxo">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div style="line-height: 1px; margin-right: 8px; margin-left: 4px; gap: 0px; margin-top: 0px;">
+                                    <h4 class="default-nome-pet" style="margin-bottom: 0px;">Usuários Cadastrados</h4>
+                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0px;">
+                                        <h3 class="default-raca">#</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sectionsolicitacoes">
+                        <div id="divpet">
+                            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px;">
+                                <div class="div-icons azul">
+                                <i class="fa-regular fa-file-lines"></i> 
+                                </div>
+                                <div style="line-height: 1px; margin-right: 8px; margin-left: 4px; gap: 0px; margin-top: 0px;">
+                                    <h4 class="default-nome-pet" style="margin-bottom: 0px;">Solicitações Pendentes</h4>
+                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0px;">
+                                        <h3 class="default-raca">#</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sectiondenuncias">
+                        <div id="divpet">
+                            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px;">
+                                <div class="div-icons laranja">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <div style="line-height: 1px; margin-right: 8px; margin-left: 4px; gap: 0px; margin-top: 0px;">
+                                    <h4 class="default-nome-pet" style="margin-bottom: 0px;">Denúncias</h4>
+                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0px;">
+                                        <h3 class="default-raca">#</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="div-status">
+                <div style="display: flex; align-items: center; margin-bottom: 20px; margin-left: 8px;">
+                    <div class="div-icons" style="height: 50px; width: 50px; background-color: #1351B4;">
+                        <i class="fa-regular fa-hospital"></i>
+                    </div>
+                    <h2 style="color: #12295D; font-weight: 800; font-family: arial;">Credenciados</h2>
+                </div>
+                <section>
+                    <div style="width: 100%; height: auto;">
+                        <table id="board">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center;">Nome</th>
+                                    <th>CPF/CNPJ</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>default</td>
+                                <td>000.000.000.00</td>
+                                <td><div>default-status-request</div></td>
+                                <td>
+                                    <button class="buttonaction"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="buttonaction"><i class="fa-solid fa-ellipsis"></i></button>
+                                </td>
+                            </tbody>
+                        </table>                
+                    </div>
+                </section>
+            </div>
+            <div class="div-status">
+                <section>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px; margin-left: 8px;">
+                        <div class="div-icons" style="height: 50px; width: 50px; background-color: #1351B4;">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h2 style="color: #12295D; font-weight: 800; font-family: arial;">Usuários Cadastrados</h2>
+                    </div>
+                    <div style="width: 100%; height: auto;">
+                        <table id="board">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center;">Nome</th>
+                                    <th>CPF/CNPJ</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>default</td>
+                                <td>000.000.000.00</td>
+                                <td><div>default-status-request</div></td>
+                                <td>
+                                    <button class="buttonaction"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="buttonaction"><i class="fa-solid fa-ellipsis"></i></button>
+                                </td>
+                            </tbody>
+                        </table>                
+                    </div>
+                </section>
+            </div>
+            <section id="solicitacoespendentes">
+                <div id="divsolicitacoespendentes">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px; margin-left: 8px;">
+                        <div class="div-icons" style="height: 50px; width: 50px; background-color: #E63946;">
+                            <i class="fa-solid fa-ban"></i>
+                        </div>
+                        <h2 style="color: #12295D; font-weight: 800; font-family: arial;">BLOQUEIOS</h2>
+                    </div>
+                    <table id="tablesolicitacoes">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Motivo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>default-nome-request</td>
+                                <td>
+                                    <div>default-status-request</div>
+                                </td>
+                                <td>default-data-de-request</td>
+                                <td>
+                                    <button id="autorizar">Desbloquear</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape">
+            <div class="rodape-esq">
+                <div class="brand-footer"><strong>SISVET</strong><span>Sistema Integrado de Saúde Veterinária</span></div>
+            </div>
+            <div><p class="copy">© 2024 - SISVET. Todos os direitos reservados.</p></div>
+            <div class="rodape-links">
+                <a href="#">Acessibilidade</a><span>|</span><a href="#">Termos de uso</a><span>|</span><a href="#">Privacidade</a>
+            </div>
+        </footer>
+    </body>
+</html>
