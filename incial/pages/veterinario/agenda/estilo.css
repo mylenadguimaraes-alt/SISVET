@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* O body mantém os 100vh para preencher a tela inteira */
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior azul (Header) */
+header {
+    background-color: #004085;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 18px;
+    position: absolute;
+    left: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* O container agora usa height: auto e ajusta a margem para empurrar o footer */
+.container {
+    max-width: 850px;
+    width: 90%;
+    height: auto; /* Altura automática conforme recomendado pelo áudio */
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: auto; /* Garante que o footer continua lá no final da página */
+}
+
+h2 {
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+/* Campos de texto */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botões */
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #004085;
+}
+
+/* Rodapé preso lá embaixo */
+footer {
+    background-color: #004085;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
