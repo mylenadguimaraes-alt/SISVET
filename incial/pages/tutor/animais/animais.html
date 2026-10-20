@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meus Animais</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        <link rel="stylesheet" href="styleanimais.css">
+        <link rel="icon" href="logo.png">
+    </head>
+    <body>
+        <header class="topo">
+            <div class="logo">
+                <span class="icone-logo"><img src="logo.png" alt="" height="40px"></span>
+                <span>VetSaúde</span>
+            </div>
+            <details class="perfil">
+                <summary>
+                    <img  src="avatar.jpg" alt="sua foto">
+                    <span>default-name</span>
+                </summary>
+                <div class="menu-perfil">
+                    <a href="#">Meu Perfil</a>
+                    <a href="#">Sair</a>
+                </div>
+            </details>
+        </header>
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="#"><i class="fa-solid fa-paw"></i>Meus animais</a></li>
+                    <li><a href="#"><i class="fa-solid fa-clipboard-check"></i> Autorizações</a></li>
+                    <li><a href="#"><i class="fa-regular fa-file"></i> Documentos</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                    <li><a href="#"><i class="fa-solid fa-door-open"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+            <main class="conteudo">
+                <section class="area-titulo">
+                    <h1>Meus Animais</h1>
+                    <p>Gerencie os animais cadastrados em sua conta.</p>
+                </section>
+                <div class="acoes">
+                    <div class="busca">
+                        <input type="text" placeholder="Buscar animal...">
+                        <button type="button" style="background-color: white; border: none; cursor: pointer;"><i class="fa-solid fa-magnifying-glass" style="color: black;"></i></button>
+                    </div>
+                    <button class="botao-adicionar">+ Adicionar Animal</button>
+                </div>
+                <div class="lista-animais">
+                    <div class="card-animal">
+                        <img src="foto-cachorro.jpg" alt="Foto do animal">
+                        <div class="info">
+                            <h3>default_nome</h3>
+                            <span>Raça • Idade • Sexo</span>
+
+                            <div class="links">
+                                <a href="#"> Ver prontuário</a>
+                                <a href="#"> Editar</a>
+                            </div>
+                        </div>
+                        <span class="menu-pontos">⋮</span>
+                    </div>
+                </div>
+            </main>
+            <footer class="rodape">
+                <div class="rodape-esq">
+                    <strong>sisvet.br</strong>
+                    <span>© 2026 - VetSaúde. Todos os direitos reservados.</span>
+                </div>
+                <div class="rodape-direita">
+                    <a href="#">Acessibilidade</a>
+                    <a href="#">Termos de uso</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
