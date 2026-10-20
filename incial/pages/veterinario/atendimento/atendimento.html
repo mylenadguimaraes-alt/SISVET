@@ -1,101 +1,107 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SISVET - Atendimento Veterinário</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header>
-        <h1>SISVET | Saúde Veterinária</h1>
-        <nav>
-            <a href="agenda.html">Agenda</a>
-            <a href="atendimento.html">Atendimento</a>
-            <a href="historico.html">Histórico</a>
-        </nav>
-    </header>
+<header>
+    <h1>SISVET | Saúde Veterinária</h1>
+    <nav>
+        <a href="agenda.html">Agenda</a>
+        <a href="atendimento.html">Atendimento</a>
+        <a href="historico.html">Histórico</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <h2>Atendimento do Pet</h2>
+<main class="container">
+    <h2>Atendimento do Pet</h2>
 
-        <p>
-            Horário:<br>
-            <input type="text" id="horario" placeholder="Ex: 14:00"><br>
+    <form id="formAtendimento">
+        <label for="horario">Horário:</label>
+        <input type="text" id="horario" placeholder="Ex: 14:00">
 
-            Nome do Animal:<br>
-            <input type="text" id="nome" placeholder="Ex: Max"><br>
+        <label for="nome">Nome do Animal:</label>
+        <input type="text" id="nome" placeholder="Ex: Max" required>
 
-            Queixa / Motivo:<br>
-            <input type="text" id="queixa"><br>
+        <label for="tutor">Nome do Tutor:</label>
+        <input type="text" id="tutor" placeholder="Ex: João">
 
-            Anamnese (Sintomas e Histórico):<br>
-            <textarea id="anamnese" rows="4"></textarea><br>
+        <label for="queixa">Queixa / Motivo:</label>
+        <input type="text" id="queixa" placeholder="Motivo da consulta">
 
-            Diagnóstico:<br>
-            <textarea id="diagnostico" rows="4"></textarea><br>
+        <label for="anamnese">Anamnese (Sintomas e Histórico):</label>
+        <textarea id="anamnese" rows="4"
+                  placeholder="Descreva os sintomas e o histórico do animal"></textarea>
 
-            Procedimentos Realizados:<br>
-            <textarea id="procedimentos" rows="3"></textarea><br>
+        <label for="diagnostico">Diagnóstico:</label>
+        <textarea id="diagnostico" rows="4"
+                  placeholder="Diagnóstico veterinário"></textarea>
 
-            Observações:<br>
-            <input type="text" id="obs"><br>
+        <label for="procedimentos">Procedimentos Realizados:</label>
+        <textarea id="procedimentos" rows="3"
+                  placeholder="Procedimentos realizados"></textarea>
 
-            <button onclick="finalizar()">Finalizar Consulta</button>
-        </p>
-    </div>
+        <label for="obs">Observações:</label>
+        <textarea id="obs" rows="3"
+                  placeholder="Observações adicionais"></textarea>
 
-    <footer>
-        <p>SISVET - Sistema Integrado de Saúde Veterinária &copy; 2026</p>
-    </footer>
+        <button type="submit">Finalizar Consulta</button>
+    </form>
+</main>
 
-    <script>
-        function finalizar() {
-            var horario = document.getElementById("horario").value;
-            var nome = document.getElementById("nome").value;
-            var queixa = document.getElementById("queixa").value;
-            var anamnese = document.getElementById("anamnese").value;
-            var diagnostico = document.getElementById("diagnostico").value;
-            var procedimentos = document.getElementById("procedimentos").value;
-            var obs = document.getElementById("obs").value;
+<footer>
+    <p>SISVET - Sistema Integrado de Saúde Veterinária &copy; 2026</p>
+</footer>
 
-            if (nome == "") {
-                alert("Por favor, preencha pelo menos o nome do animal!");
-                return;
-            }
+<script>
+    const formAtendimento = document.getElementById("formAtendimento");
 
-            var hoje = new Date();
-            var dataTexto = hoje.getDate() + "/" + (hoje.getMonth() + 1) + "/" + hoje.getFullYear();
+    formAtendimento.addEventListener("submit", function(evento) {
+        evento.preventDefault();
 
-            var consulta = {
-horario: horario,
-nome: nome,
-data: dataTexto,
-queixa: queixa,
-anamnese: anamnese,
-diagnostico: diagnostico,
-procedimentos: procedimentos,
-obs: obs
-};
+        const nome = document.getElementById("nome").value.trim();
 
-var historico = JSON.parse(localStorage.getItem("historicoConsultas"));
-if (historico == null) {
-historico = [];
-}
+        if (!nome) {
+            alert("Por favor, preencha o nome do animal!");
+            return;
+        }
 
-historico.push(consulta);
-localStorage.setItem("historicoConsultas", JSON.stringify(historico));
+        const hoje = new Date();
+        const dataTexto = hoje.toLocaleDateString("pt-BR");
 
-alert("Atendimento de " + nome + " finalizado e salvo no Histórico!");
+        const consulta = {
+            horario: document.getElementById("horario").value.trim(),
+            nome: nome,
+            tutor: document.getElementById("tutor").value.trim(),
+            data: dataTexto,
+            queixa: document.getElementById("queixa").value.trim(),
+            anamnese: document.getElementById("anamnese").value.trim(),
+            diagnostico: document.getElementById("diagnostico").value.trim(),
+            procedimentos: document.getElementById("procedimentos").value.trim(),
+            obs: document.getElementById("obs").value.trim()
+        };
 
-document.getElementById("horario").value = "";
- document.getElementById("nome").value = "";
-document.getElementById("queixa").value = "";
-document.getElementById("anamnese").value = "";
-document.getElementById("diagnostico").value = "";
-document.getElementById("procedimentos").value = "";
-document.getElementById("obs").value = "";
-}
+        const historico = JSON.parse(
+            localStorage.getItem("historicoConsultas") || "[]"
+        );
+
+        historico.push(consulta);
+
+        localStorage.setItem(
+            "historicoConsultas",
+            JSON.stringify(historico)
+        );
+
+        alert("Atendimento de " + nome +
+              " finalizado e salvo no Histórico!");
+
+        formAtendimento.reset();
+    });
 </script>
 
 </body>
