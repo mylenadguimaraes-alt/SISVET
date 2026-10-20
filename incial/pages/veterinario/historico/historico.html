@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Histórico Clínico</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>SISVET | Saúde Veterinária</h1>
+    <nav>
+        <a href="agenda.html">Agenda</a>
+        <a href="atendimento.html">Atendimento</a>
+        <a href="historico.html">Histórico</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2>Histórico Clínico do Animal</h2>
+
+    <h3>Consultas Realizadas</h3>
+
+    <ul id="listaHistorico" class="lista-historico"></ul>
+
+    <button type="button" id="botaoLimpar" class="botao-perigo">
+        Limpar Histórico
+    </button>
+</main>
+
+<footer>
+    <p>SISVET - Sistema Integrado de Saúde Veterinária &copy; 2026</p>
+</footer>
+
+<script>
+    const listaHistorico = document.getElementById("listaHistorico");
+
+    function adicionarCampo(item, titulo, valor) {
+        const paragrafo = document.createElement("p");
+        const rotulo = document.createElement("strong");
+
+        rotulo.textContent = titulo + ": ";
+        paragrafo.appendChild(rotulo);
+        paragrafo.appendChild(
+            document.createTextNode(valor || "Não informado")
+        );
+
+        item.appendChild(paragrafo);
+    }
+
+    function carregarHistorico() {
+        const historico = JSON.parse(
+            localStorage.getItem("historicoConsultas") || "[]"
+        );
+
+        listaHistorico.innerHTML = "";
+
+        if (historico.length === 0) {
+            const item = document.createElement("li");
+            item.textContent = "Nenhum atendimento registrado ainda.";
+            item.className = "historico-vazio";
+            listaHistorico.appendChild(item);
+            return;
+        }
+
+        historico.forEach(consulta => {
+            const item = document.createElement("li");
+            item.className = "historico-item";
+
+            adicionarCampo(item, "Pet", consulta.nome);
+            adicionarCampo(item, "Tutor", consulta.tutor);
+            adicionarCampo(item, "Data", consulta.data);
+            adicionarCampo(item, "Horário", consulta.horario);
+            adicionarCampo(item, "Queixa", consulta.queixa);
+            adicionarCampo(item, "Anamnese", consulta.anamnese);
+            adicionarCampo(item, "Diagnóstico", consulta.diagnostico);
+            adicionarCampo(item, "Procedimentos", consulta.procedimentos);
+            adicionarCampo(item, "Observações", consulta.obs);
+
+            listaHistorico.appendChild(item);
+        });
+    }
+
+    document.getElementById("botaoLimpar").addEventListener("click", function() {
+        if (confirm("Tem certeza que deseja apagar todo o histórico?")) {
+            localStorage.removeItem("historicoConsultas");
+            carregarHistorico();
+        }
+    });
+
+    carregarHistorico();
+</script>
+
+</body>
+</html>

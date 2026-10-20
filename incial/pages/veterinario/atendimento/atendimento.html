@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Atendimento Veterinário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>SISVET | Saúde Veterinária</h1>
+    <nav>
+        <a href="agenda.html">Agenda</a>
+        <a href="atendimento.html">Atendimento</a>
+        <a href="historico.html">Histórico</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2>Atendimento do Pet</h2>
+
+    <form id="formAtendimento">
+        <label for="horario">Horário:</label>
+        <input type="text" id="horario" placeholder="Ex: 14:00">
+
+        <label for="nome">Nome do Animal:</label>
+        <input type="text" id="nome" placeholder="Ex: Max" required>
+
+        <label for="tutor">Nome do Tutor:</label>
+        <input type="text" id="tutor" placeholder="Ex: João">
+
+        <label for="queixa">Queixa / Motivo:</label>
+        <input type="text" id="queixa" placeholder="Motivo da consulta">
+
+        <label for="anamnese">Anamnese (Sintomas e Histórico):</label>
+        <textarea id="anamnese" rows="4"
+                  placeholder="Descreva os sintomas e o histórico do animal"></textarea>
+
+        <label for="diagnostico">Diagnóstico:</label>
+        <textarea id="diagnostico" rows="4"
+                  placeholder="Diagnóstico veterinário"></textarea>
+
+        <label for="procedimentos">Procedimentos Realizados:</label>
+        <textarea id="procedimentos" rows="3"
+                  placeholder="Procedimentos realizados"></textarea>
+
+        <label for="obs">Observações:</label>
+        <textarea id="obs" rows="3"
+                  placeholder="Observações adicionais"></textarea>
+
+        <button type="submit">Finalizar Consulta</button>
+    </form>
+</main>
+
+<footer>
+    <p>SISVET - Sistema Integrado de Saúde Veterinária &copy; 2026</p>
+</footer>
+
+<script>
+    const formAtendimento = document.getElementById("formAtendimento");
+
+    formAtendimento.addEventListener("submit", function(evento) {
+        evento.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+
+        if (!nome) {
+            alert("Por favor, preencha o nome do animal!");
+            return;
+        }
+
+        const hoje = new Date();
+        const dataTexto = hoje.toLocaleDateString("pt-BR");
+
+        const consulta = {
+            horario: document.getElementById("horario").value.trim(),
+            nome: nome,
+            tutor: document.getElementById("tutor").value.trim(),
+            data: dataTexto,
+            queixa: document.getElementById("queixa").value.trim(),
+            anamnese: document.getElementById("anamnese").value.trim(),
+            diagnostico: document.getElementById("diagnostico").value.trim(),
+            procedimentos: document.getElementById("procedimentos").value.trim(),
+            obs: document.getElementById("obs").value.trim()
+        };
+
+        const historico = JSON.parse(
+            localStorage.getItem("historicoConsultas") || "[]"
+        );
+
+        historico.push(consulta);
+
+        localStorage.setItem(
+            "historicoConsultas",
+            JSON.stringify(historico)
+        );
+
+        alert("Atendimento de " + nome +
+              " finalizado e salvo no Histórico!");
+
+        formAtendimento.reset();
+    });
+</script>
+
+</body>
+</html>
