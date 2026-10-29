@@ -1,0 +1,128 @@
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+:focus-visible{outline:3px solid var(--azul); outline-offset:3px}
+.topo :focus-visible, .rodape :focus-visible, .como-funciona-cta :focus-visible{outline-color:#fff}
+.como-funciona-pular{position:absolute; left:12px; top:-70px; z-index:20; background:#fff; color:var(--azul-escuro); padding:10px 16px; border-radius:8px; font-weight:600; text-decoration:none}
+.como-funciona-pular:focus{top:8px}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important} }
+
+.topo-marca{display:flex; align-items:center; color:#fff; line-height:20px}
+.topo-marca img{height:60px}
+.topo-marca div{display:flex; flex-direction:column}
+.topo-marca strong{font-size:24px}
+.topo-marca span{font-size:16px}
+.menu-toggle{display:none; width:44px; height:44px; background:none; border:1.5px solid rgba(255,255,255,.7); border-radius:8px; color:#fff; font-size:18px; cursor:pointer; place-items:center}
+.icon-busca{min-width:36px; min-height:36px}
+
+.como-funciona-secao{padding:64px 56px; background:#fff}
+.como-funciona-secao--suave{background:#F7F9FC}
+.como-funciona-secao--azul{background:var(--bg)}
+.como-funciona-container{max-width:1120px; margin:0 auto}
+.como-funciona-cabecalho{max-width:680px; margin:0 auto 40px; text-align:center}
+.como-funciona-cabecalho h2{font-size:28px; line-height:1.25; color:var(--azul-escuro); margin-bottom:12px}
+.como-funciona-cabecalho p{font-size:16px; line-height:1.6}
+
+.como-funciona-hero{display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center; padding:56px; background:linear-gradient(180deg, #F2F8FF 0%, #E8F3FF 100%)}
+.como-funciona-hero h1{font-size:44px; font-weight:800; line-height:1.1; color:#0F2D5E; margin:18px 0 14px}
+.como-funciona-subtitulo{font-size:20px; font-weight:500; line-height:1.35; color:var(--azul-escuro); max-width:460px}
+.como-funciona-lead{font-size:15px; line-height:1.7; margin:16px 0 26px; max-width:500px}
+.como-funciona-hero .botoes{flex-wrap:wrap}
+.como-funciona-figura figcaption{margin-top:10px; font-size:12.5px; text-align:center; color:#4A5568}
+.como-funciona-fluxo{display:grid; grid-template-columns:1fr auto auto auto 1fr; gap:10px; align-items:center; background:#fff; border:1px solid #D9E9FF; border-radius:20px; padding:28px 20px}
+.como-funciona-coluna{display:grid; gap:14px}
+.como-funciona-no{display:flex; flex-direction:column; align-items:center; gap:6px; padding:12px 6px; text-align:center; font-size:13px; font-weight:600; line-height:1.25; color:var(--azul-escuro); background:var(--bg); border-radius:14px}
+.como-funciona-no i{width:38px; height:38px; display:grid; place-items:center; font-size:16px; color:#fff; background:var(--azul); border-radius:50%}
+.como-funciona-seta{font-size:16px; color:var(--azul)}
+.como-funciona-hub{width:128px; display:grid; justify-items:center; gap:6px; text-align:center}
+.como-funciona-hub-logo{width:96px; height:96px; display:grid; place-items:center; background:var(--azul-claro); border-radius:50%}
+.como-funciona-hub-logo img{width:68px; height:68px}
+.como-funciona-hub strong{font-size:15px; color:var(--azul-escuro)}
+.como-funciona-hub span{font-size:11.5px; line-height:1.3}
+
+.como-funciona-grade{display:grid; grid-template-columns:repeat(4, 1fr); gap:24px}
+.como-funciona-grade--3{grid-template-columns:repeat(3, 1fr)}
+.como-funciona-card, .como-funciona-beneficio{background:#fff; border:1px solid #D9E9FF; border-radius:16px; padding:24px}
+.como-funciona-card h3, .como-funciona-beneficio h3{font-size:17px; line-height:1.3; color:var(--azul-escuro); margin-bottom:8px}
+.como-funciona-card p, .como-funciona-beneficio p{font-size:14.5px; line-height:1.6}
+.como-funciona-card ul{list-style:none; display:grid; gap:8px; margin-top:14px; padding-top:14px; border-top:1px solid var(--azul-claro)}
+.como-funciona-card li{position:relative; padding-left:20px; font-size:14px; line-height:1.5}
+.como-funciona-card li::before{content:""; position:absolute; left:4px; top:.55em; width:6px; height:6px; background:var(--azul); border-radius:50%}
+.como-funciona-beneficio{display:flex; gap:14px; align-items:flex-start; padding:20px}
+.como-funciona-beneficio .circulo{flex:none; width:46px; height:46px; margin:0; font-size:18px}
+.como-funciona-observacao{max-width:640px; margin:28px auto 0; font-size:13px; line-height:1.5; text-align:center; color:#4A5568}
+
+.como-funciona-etapas{list-style:none; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px}
+.como-funciona-etapa{position:relative; display:flex; flex-direction:column; gap:10px; padding:24px; background:#fff; border:1px solid #D9E9FF; border-radius:16px}
+.como-funciona-etapa:not(:last-child)::after{content:""; position:absolute; top:43px; right:-24px; width:24px; height:3px; background:var(--azul)}
+.como-funciona-etapa--destaque{border-color:var(--azul); box-shadow:0 0 0 1px var(--azul)}
+.como-funciona-etapa-topo{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+.como-funciona-etapa-num, .como-funciona-etapa-ico{width:40px; height:40px; display:grid; place-items:center}
+.como-funciona-etapa-num{font-size:18px; font-weight:800; color:#fff; background:var(--azul); border-radius:50%}
+.como-funciona-etapa-ico{font-size:18px; color:var(--azul); background:var(--azul-claro); border-radius:12px}
+.como-funciona-etapa h3{font-size:17px; line-height:1.3; color:var(--azul-escuro)}
+.como-funciona-etapa p{font-size:14.5px; line-height:1.6}
+.como-funciona-etapa .como-funciona-etapa-nota{margin-top:auto; padding-top:12px; border-top:1px solid var(--azul-claro); font-size:13px; color:#4A5568}
+
+.como-funciona-faq-lista{max-width:820px; margin:0 auto; display:grid; gap:12px}
+.como-funciona-faq details{background:#fff; border:1px solid #D9E9FF; border-radius:14px}
+.como-funciona-faq details[open]{border-color:var(--azul)}
+.como-funciona-faq summary{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 20px; font-size:16px; font-weight:600; line-height:1.4; color:var(--azul-escuro); cursor:pointer; list-style:none; border-radius:14px}
+.como-funciona-faq summary::-webkit-details-marker{display:none}
+.como-funciona-faq summary::after{content:""; flex:none; width:9px; height:9px; margin-top:-4px; border-right:2px solid var(--azul); border-bottom:2px solid var(--azul); transform:rotate(45deg); transition:transform .2s}
+.como-funciona-faq details[open] summary::after{margin-top:4px; transform:rotate(-135deg)}
+.como-funciona-faq details p{padding:0 20px 20px; font-size:15px; line-height:1.7}
+
+.como-funciona-cta{padding:64px 24px; text-align:center; color:#fff; background:var(--azul)}
+.como-funciona-cta h2{max-width:640px; margin:0 auto 12px; font-size:30px; line-height:1.25}
+.como-funciona-cta p{max-width:600px; margin:0 auto 28px; font-size:16px; line-height:1.6}
+.como-funciona-cta .botoes{justify-content:center; flex-wrap:wrap}
+.como-funciona-cta .btn-claro{background:#fff; color:var(--azul-escuro); border-color:#fff}
+.como-funciona-cta .btn-claro:hover{background:var(--azul-claro); border-color:var(--azul-claro)}
+.como-funciona-cta .btn-contorno{background:transparent; color:#fff; border-color:#fff}
+.como-funciona-cta .btn-contorno:hover{background:rgba(255,255,255,.16); border-color:#fff}
+
+@media (max-width:1080px){
+
+  .topo{height:auto; flex-wrap:wrap; padding:8px 16px; row-gap:8px; column-gap:12px}
+  .topo-marca{order:1; margin-right:auto}
+  .topo-dir{order:2; margin-right:0}
+  .menu-toggle{order:3; display:inline-grid}
+  .menu{order:4; display:none; flex:1 0 100%; flex-direction:column; gap:2px; padding:8px 0 4px; border-top:1px solid rgba(255,255,255,.3)}
+  .menu.aberto{display:flex}
+  .menu a{padding:12px 10px; border-bottom:0; border-radius:8px}
+  .menu a.ativo{background:rgba(255,255,255,.16)}
+
+  .como-funciona-etapas{grid-template-columns:1fr; max-width:640px; margin:0 auto}
+  .como-funciona-etapa:not(:last-child)::after{top:auto; right:auto; bottom:-24px; left:43px; width:3px; height:24px}
+  .como-funciona-grade{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:900px){
+  .como-funciona-hero{grid-template-columns:1fr; gap:32px; padding:40px 24px}
+  .como-funciona-figura{max-width:560px; width:100%; margin:0 auto}
+  .como-funciona-grade--perfis{grid-template-columns:1fr; max-width:640px; margin:0 auto}
+  .como-funciona-grade--3{grid-template-columns:repeat(2, 1fr)}
+  .como-funciona-grade--perfis{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .topo-marca img{height:48px}
+  .topo-marca strong{font-size:20px}
+  .topo-marca span{font-size:12px; line-height:16px}
+  .topo-dir{order:5; flex:1 0 100%}
+  .topo-dir .btn{flex:1}
+  .como-funciona-secao{padding:48px 20px}
+  .como-funciona-cabecalho{margin-bottom:28px}
+  .como-funciona-cabecalho h2{font-size:24px}
+  .como-funciona-hero{padding:32px 20px}
+  .como-funciona-hero h1{font-size:34px}
+  .como-funciona-subtitulo{font-size:18px}
+  .como-funciona-hero .botoes .btn{flex:1 1 100%; justify-content:center}
+  .como-funciona-grade, .como-funciona-grade--3{grid-template-columns:1fr}
+  .como-funciona-fluxo{grid-template-columns:1fr; justify-items:center; padding:20px 16px}
+  .como-funciona-coluna{grid-template-columns:1fr 1fr; width:100%}
+  .como-funciona-seta{transform:rotate(90deg)}
+  .como-funciona-cta{padding:48px 20px}
+  .como-funciona-cta h2{font-size:24px}
+  .como-funciona-cta .botoes .btn{flex:1 1 100%; justify-content:center}
+  .rodape{flex-direction:column; gap:12px; padding:20px 16px; text-align:center}
+  .rodape-esq, .rodape-links{justify-content:center}
+  .rodape-links{flex-wrap:wrap}
+}

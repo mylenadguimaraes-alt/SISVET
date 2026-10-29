@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetSaúde - Animal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="animal.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo"><i class="fa-solid fa-paw"></i> VetSaúde</div>
+            <nav class="menu">
+                <a href="../../../index.html"><span><i class="fa-solid fa-house"></i></span> Início</a>
+                <a href="../animais/animais.html" class="ativo"><span><i class="fa-solid fa-paw"></i></span> Meus animais</a>
+                <a href="../../sistema/autorizacoes/autorizacao.html"><span><i class="fa-regular fa-clipboard"></i></span> Autorizações</a>
+                <a href="../../sistema/documentos/documentos.html"><span><i class="fa-regular fa-file"></i></span> Documentos</a>
+                <a href="../dashboard/dashboard.html"><span><i class="fa-solid fa-user"></i></span> Perfil</a>
+                <a href="../../../index.html" class="sair"><span><i class="fa-solid fa-door-open"></i></span> Sair</a>
+            </nav>
+        </aside>
+
+        <div class="pagina">
+            <header class="topo">
+                <div class="logo">
+                    <span class="icone-logo"><img src="logo.png" alt="" height="40px"></span>
+                    <span>VetSaúde</span>
+                </div>
+                <details class="perfil">
+                    <summary>
+                        <img src="avatar.jpg" alt="sua foto">
+                        <span>default-name</span>
+                    </summary>
+                    <div class="menu-perfil">
+                        <a href="#">Meu Perfil</a>
+                        <a href="#">Sair</a>
+                    </div>
+                </details>
+            </header>
+
+            <main class="main">
+                <a href="../animais/animais.html" class="voltar">Voltar para meus animais</a>
+
+                <div class="card-perfil">
+                    <img src="foto-cachorro.jpg" alt="animal">
+                    <div>
+                        <h2>default_name_pet</h2>
+                        <p>default_breed • default_pet_age • default_sex_pet <span class="badge">Ativo</span></p>
+                    </div>
+                    <button class="btn-editar"><i class="fa-solid fa-pencil"></i> Editar dados</button>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-ativo">Resumo</button>
+                    <button>Consultas</button>
+                    <button>Vacinas</button>
+                    <button>Exames</button>
+                    <button>Medicamentos</button>
+                    <button>Documentos</button>
+                    <button>Histórico</button>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Informações do animal</h4>
+                        <div class="linha"><span>Nome</span><b>default_name</b></div>
+                        <div class="linha"><span>Espécie</span><b>Canina</b></div>
+                        <div class="linha"><span>Raça</span><b>default_breed</b></div>
+                        <div class="linha"><span>Idade</span><b>default_pet_age</b></div>
+                        <div class="linha"><span>Sexo</span><b>default_pet_age</b></div>
+                        <div class="linha"><span>Peso</span><b>default_weight</b></div>
+                        <div class="linha"><span>Microchip</span><b>Não informado</b></div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Últimas atualizações</h4>
+                        <div class="update"><i><i class="fa-solid fa-user"></i></i><div><b>Consulta geral</b><br><small>27/09/2026 • default_name_clinic</small></div></div>
+                        <div class="update"><i><i class="fa-solid fa-syringe"></i></i><div><b>Vacina V10</b><br><small>15/08/2026 • default_name_clinic</small></div></div>
+                        <div class="update"><i><i class="fa-solid fa-microscope"></i></i><div><b>Exame de sangue</b><br><small>10/07/2026 • default_name_clinic</small></div></div>
+                        <div class="update"><i><i class="fa-solid fa-prescription-bottle-medical"></i></i><div><b>Medicação - Antibiótico</b><br><small>05/06/2026 • default_name_clinic</small></div></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="rodape">
+                <div class="rodape-esquerda">
+                    <strong>sisvet.br</strong>
+                    <span>© 2026 - VetSaúde. Todos os direitos reservados.</span>
+                </div>
+                <div class="rodape-direita">
+                    <a href="#">Acessibilidade</a>
+                    <a href="#">Termos de uso</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como funciona | SISVET - Sistema Integrado de Saúde Veterinária</title>
+  <meta name="description" content="Entenda a proposta do SISVET: como tutores, médicos-veterinários e clínicas poderão organizar e consultar o histórico de saúde dos animais.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="como-funciona.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="icon" href="logo.png">
+  <script src="como-funciona.js" defer></script>
+</head>
+<body>
+  <a class="como-funciona-pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo-marca">
+      <img src="logo.png" alt="SISVET">
+      <div>
+        <strong>SISVET</strong>
+        <span>Sistema Integrado de Saúde Veterinária</span>
+      </div>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+      <a href="index.html"><span class="ico"><i class="fa-solid fa-house" aria-hidden="true"></i></span> Início</a>
+      <a href="index.html#features">Sobre o sistema</a>
+      <a class="ativo" href="como-funciona.html" aria-current="page">Como funciona</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+    <div class="topo-dir">
+      <button class="icon-busca" type="button" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+      <button class="btn btn-outline" type="button"><i class="fa-solid fa-user" aria-hidden="true"></i> Entrar</button>
+      <button class="btn btn-solid" type="button"><i class="fa-solid fa-user" aria-hidden="true"></i> + Cadastrar</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- B. HERO -->
+    <section class="como-funciona-hero" aria-labelledby="titulo-hero">
+      <div>
+        <span class="badge"><i class="fa-solid fa-paw" aria-hidden="true"></i> Projeto em desenvolvimento</span>
+        <h1 id="titulo-hero">Entenda como funciona o SISVET</h1>
+        <p class="como-funciona-subtitulo">Mais organização, praticidade e integração para acompanhar a saúde do seu pet.</p>
+        <p class="como-funciona-lead">O SISVET está sendo desenvolvido para conectar tutores, clínicas e médicos-veterinários em um único ambiente digital. A proposta é reunir o histórico de saúde dos animais e permitir que o acesso a essas informações seja gerenciado pelo tutor, de acordo com as regras da plataforma.</p>
+        <div class="botoes">
+          <a class="btn btn-solid btn-lg" href="#etapas"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Ver o passo a passo</a>
+          <a class="btn btn-outline btn-lg" href="#faq"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Perguntas frequentes</a>
+        </div>
+      </div>
+      <figure class="como-funciona-figura">
+        <div class="como-funciona-fluxo" role="img" aria-label="Diagrama do fluxo proposto: tutores e animais, de um lado, e médicos-veterinários e clínicas, do outro, conectados ao prontuário do animal pelo SISVET.">
+          <div class="como-funciona-coluna">
+            <div class="como-funciona-no"><i class="fa-solid fa-user"></i>Tutor</div>
+            <div class="como-funciona-no"><i class="fa-solid fa-paw"></i>Animal</div>
+          </div>
+          <i class="fa-solid fa-arrows-left-right como-funciona-seta"></i>
+          <div class="como-funciona-hub">
+            <div class="como-funciona-hub-logo"><img src="logo.png" alt=""></div>
+            <strong>SISVET</strong>
+            <span>Prontuário e autorizações de acesso</span>
+          </div>
+          <i class="fa-solid fa-arrows-left-right como-funciona-seta"></i>
+          <div class="como-funciona-coluna">
+            <div class="como-funciona-no"><i class="fa-solid fa-user-doctor"></i>Médico-veterinário</div>
+            <div class="como-funciona-no"><i class="fa-solid fa-hospital"></i>Clínica</div>
+          </div>
+        </div>
+        <figcaption>Fluxo proposto para a plataforma.</figcaption>
+      </figure>
+    </section>
+
+    <!-- C. TUDO COMEÇA COM O SEU PET -->
+    <section class="como-funciona-secao como-funciona-secao--suave" aria-labelledby="titulo-pet">
+      <div class="como-funciona-container">
+        <div class="como-funciona-cabecalho">
+          <h2 id="titulo-pet">Tudo começa com o seu pet</h2>
+          <p>A proposta do SISVET parte do cadastro do animal. É a partir dele que as informações de saúde podem ser reunidas, associadas ao tutor responsável e consultadas de forma organizada.</p>
+        </div>
+        <div class="como-funciona-grade">
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-id-card"></i></div>
+            <h3>Identificação do animal</h3>
+            <p>Cada animal teria um cadastro próprio, com os dados necessários para identificá-lo no sistema.</p>
+          </article>
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+            <h3>Tutor responsável</h3>
+            <p>O cadastro é associado ao tutor, que é a referência para as informações e permissões do animal.</p>
+          </article>
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></div>
+            <h3>Histórico organizado</h3>
+            <p>Consultas, vacinas, exames, medicamentos e documentos poderão ficar reunidos no mesmo ambiente.</p>
+          </article>
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Consulta facilitada</h3>
+            <p>Em vez de procurar papéis e registros espalhados, as informações disponíveis poderão ser consultadas em um só lugar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. COMO FUNCIONA NA PRÁTICA -->
+    <section class="como-funciona-secao como-funciona-secao--azul" id="etapas" aria-labelledby="titulo-etapas">
+      <div class="como-funciona-container">
+        <div class="como-funciona-cabecalho">
+          <h2 id="titulo-etapas">Como funciona na prática</h2>
+          <p>Este é o fluxo proposto para a plataforma. As funcionalidades serão disponibilizadas conforme a evolução do projeto.</p>
+        </div>
+        <ol class="como-funciona-etapas" role="list">
+          <li class="como-funciona-etapa">
+            <div class="como-funciona-etapa-topo">
+              <span class="como-funciona-etapa-num" aria-hidden="true">1</span>
+              <span class="como-funciona-etapa-ico" aria-hidden="true"><i class="fa-solid fa-user-plus"></i></span>
+            </div>
+            <h3>Cadastro e organização</h3>
+            <p>O tutor cria sua conta e cadastra os animais sob sua responsabilidade.</p>
+            <p class="como-funciona-etapa-nota">Cada animal fica associado ao seu tutor, com uma identificação organizada no sistema.</p>
+          </li>
+          <li class="como-funciona-etapa">
+            <div class="como-funciona-etapa-topo">
+              <span class="como-funciona-etapa-num" aria-hidden="true">2</span>
+              <span class="como-funciona-etapa-ico" aria-hidden="true"><i class="fa-solid fa-notes-medical"></i></span>
+            </div>
+            <h3>Registro das informações veterinárias</h3>
+            <p>Durante os atendimentos, profissionais autorizados poderão registrar as informações de saúde do animal.</p>
+            <p class="como-funciona-etapa-nota">Consultas, vacinas, exames, medicamentos e documentos veterinários.</p>
+          </li>
+          <li class="como-funciona-etapa como-funciona-etapa--destaque">
+            <div class="como-funciona-etapa-topo">
+              <span class="como-funciona-etapa-num" aria-hidden="true">3</span>
+              <span class="como-funciona-etapa-ico" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></span>
+            </div>
+            <h3>Autorizações de acesso</h3>
+            <p>O tutor poderá gerenciar quais clínicas e profissionais podem consultar as informações do seu animal.</p>
+            <p class="como-funciona-etapa-nota">O controle de acesso é uma parte central da proposta e segue as regras definidas no sistema.</p>
+          </li>
+          <li class="como-funciona-etapa">
+            <div class="como-funciona-etapa-topo">
+              <span class="como-funciona-etapa-num" aria-hidden="true">4</span>
+              <span class="como-funciona-etapa-ico" aria-hidden="true"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            </div>
+            <h3>Consulta ao histórico de saúde</h3>
+            <p>As informações registradas poderão ser consultadas de forma organizada, facilitando o acompanhamento e a continuidade dos atendimentos.</p>
+            <p class="como-funciona-etapa-nota">Um histórico estruturado reduz a dependência de documentos físicos e de informações dispersas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- E. DIFERENTES USUÁRIOS -->
+    <section class="como-funciona-secao" aria-labelledby="titulo-perfis">
+      <div class="como-funciona-container">
+        <div class="como-funciona-cabecalho">
+          <h2 id="titulo-perfis">Uma plataforma para diferentes usuários</h2>
+          <p>O SISVET propõe que tutores, médicos-veterinários e clínicas atuem sobre informações organizadas, sempre respeitando as permissões de acesso.</p>
+        </div>
+        <div class="como-funciona-grade como-funciona-grade--3 como-funciona-grade--perfis">
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+            <h3>Tutores</h3>
+            <p>Responsáveis pelos animais cadastrados. Acompanham as informações de saúde e gerenciam as autorizações.</p>
+            <ul>
+              <li>Cadastrar e organizar os dados dos animais</li>
+              <li>Consultar histórico, documentos e registros disponíveis</li>
+              <li>Gerenciar autorizações de acesso</li>
+            </ul>
+          </article>
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Médicos-veterinários</h3>
+            <p>Profissionais responsáveis pelo atendimento. Consultam e registram informações conforme as permissões concedidas.</p>
+            <ul>
+              <li>Consultar as informações necessárias ao atendimento, quando autorizados</li>
+              <li>Registrar consultas, vacinas, medicamentos e exames</li>
+              <li>Registrar documentos relacionados à saúde do animal</li>
+            </ul>
+          </article>
+          <article class="como-funciona-card">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-hospital"></i></div>
+            <h3>Clínicas veterinárias</h3>
+            <p>Participam da integração entre profissionais, animais e registros de atendimento.</p>
+            <ul>
+              <li>Associação a profissionais e animais, conforme as permissões</li>
+              <li>Organização dos registros de atendimento</li>
+              <li>Continuidade do acompanhamento dos animais</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. BENEFÍCIOS -->
+    <section class="como-funciona-secao como-funciona-secao--suave" aria-labelledby="titulo-beneficios">
+      <div class="como-funciona-container">
+        <div class="como-funciona-cabecalho">
+          <h2 id="titulo-beneficios">Mais organização para a saúde do seu pet</h2>
+          <p>Estes são os principais benefícios esperados da plataforma.</p>
+        </div>
+        <div class="como-funciona-grade como-funciona-grade--3">
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></div>
+            <div><h3>Histórico veterinário organizado</h3><p>Registros estruturados no lugar de documentos soltos.</p></div>
+          </article>
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></div>
+            <div><h3>Informações reunidas</h3><p>Dados de saúde animal em um ambiente digital.</p></div>
+          </article>
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div><h3>Consulta facilitada</h3><p>Acesso mais simples aos registros disponíveis.</p></div>
+          </article>
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-user-lock"></i></div>
+            <div><h3>Compartilhamento controlado</h3><p>As informações são compartilhadas conforme as autorizações do tutor.</p></div>
+          </article>
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
+            <div><h3>Mais praticidade</h3><p>Menos esforço para tutores e profissionais acompanharem o animal.</p></div>
+          </article>
+          <article class="como-funciona-beneficio">
+            <div class="circulo azul" aria-hidden="true"><i class="fa-solid fa-arrows-rotate"></i></div>
+            <div><h3>Continuidade do acompanhamento</h3><p>Apoio ao acompanhamento veterinário ao longo do tempo.</p></div>
+          </article>
+        </div>
+        <p class="como-funciona-observacao">Os benefícios descritos refletem a proposta do projeto e dependem da evolução das funcionalidades.</p>
+      </div>
+    </section>
+
+    <!-- G. FAQ -->
+    <section class="como-funciona-secao como-funciona-faq" id="faq" aria-labelledby="titulo-faq">
+      <div class="como-funciona-container">
+        <div class="como-funciona-cabecalho">
+          <h2 id="titulo-faq">Perguntas frequentes</h2>
+        </div>
+        <div class="como-funciona-faq-lista">
+          <details>
+            <summary>O que é o SISVET?</summary>
+            <p>O SISVET (Sistema Integrado de Saúde Veterinária) é um projeto de plataforma web para organizar e centralizar informações de saúde animal, conectando tutores, clínicas e médicos-veterinários.</p>
+          </details>
+          <details>
+            <summary>Quem poderá utilizar a plataforma?</summary>
+            <p>A plataforma está sendo desenvolvida para três perfis: tutores de animais, médicos-veterinários e clínicas veterinárias, cada um com seu papel e suas permissões.</p>
+          </details>
+          <details>
+            <summary>Como os animais serão cadastrados?</summary>
+            <p>O tutor cria uma conta e cadastra os animais sob sua responsabilidade. Cada animal fica associado ao seu tutor, o que ajuda a organizar as informações de saúde.</p>
+          </details>
+          <details>
+            <summary>Quem poderá consultar o histórico de saúde de um animal?</summary>
+            <p>O tutor poderá consultar as informações dos próprios animais. Médicos-veterinários e clínicas só poderão acessá-las com autorização, conforme as regras do sistema.</p>
+          </details>
+          <details>
+            <summary>Quais informações poderão ser registradas?</summary>
+            <p>A proposta inclui consultas e atendimentos, vacinas, medicamentos, exames e informações clínicas, além de documentos veterinários. A lista final depende das funcionalidades implementadas.</p>
+          </details>
+          <details>
+            <summary>Como funcionarão as autorizações de acesso?</summary>
+            <p>O tutor poderá gerenciar quais clínicas e profissionais têm acesso às informações do seu animal. Os detalhes de funcionamento serão definidos conforme o projeto avançar.</p>
+          </details>
+          <details>
+            <summary>O SISVET já está disponível?</summary>
+            <p>Ainda não. O SISVET está em desenvolvimento, e o que esta página descreve é o fluxo proposto para a plataforma. As funcionalidades serão disponibilizadas conforme a evolução do projeto.</p>
+          </details>
+          <details>
+            <summary>O SISVET substitui o atendimento veterinário presencial?</summary>
+            <p>Não. O SISVET tem como objetivo organizar e facilitar o acesso às informações veterinárias. A avaliação e o atendimento continuam sendo responsabilidade dos profissionais.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. CTA -->
+    <section class="como-funciona-cta" aria-labelledby="titulo-cta">
+      <h2 id="titulo-cta">Mais cuidado começa com informação organizada.</h2>
+      <p>Conheça a proposta do SISVET e acompanhe a evolução de uma plataforma pensada para facilitar a organização da saúde animal.</p>
+      <div class="botoes">
+        <a class="btn btn-lg btn-claro" href="index.html#features"><i class="fa-solid fa-paw" aria-hidden="true"></i> Conhecer o SISVET</a>
+        <a class="btn btn-lg btn-contorno" href="#faq"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Ver perguntas frequentes</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-esq">
+      <div class="brand-footer"><strong>SISVET</strong><span>Sistema Integrado de Saúde Veterinária</span></div>
+    </div>
+    <div><p class="copy">© 2024 - SISVET. Todos os direitos reservados.</p></div>
+    <div class="rodape-links">
+      <a href="#">Acessibilidade</a><span>|</span><a href="#">Termos de uso</a><span>|</span><a href="#">Privacidade</a>
+    </div>
+  </footer>
+</body>
+</html>
