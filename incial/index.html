@@ -8,9 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <link rel="icon" href="logo.png">
+  <script type="module" src="inicio.js"></script>
 </head>
 <body>
   <header class="topo">
+    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">
+      <i class="fa-solid fa-bars"></i>
+    </button>
       <div style="display: flex; flex-direction: row; align-items: center;">
         <div style="display:flex; flex-direction: row; align-items: center;">
           <img style="height: 60px;" src="logo.png" alt="SISVET">
@@ -20,16 +24,16 @@
           <p>Sistema integrado de Saúde Veterinária</p>
         </div>
       </div>
-    <nav class="menu">
+    <nav class="menu" id="menu-principal">
       <a class="ativo" href="#"><span class="ico"><i class="fa-solid fa-house"></i></span> Início</a>
-      <a href="#">Sobre o sistema</a>
-      <a href="#features">Como funciona</a>
-      <a href="#">Ajuda</a>
+      <a href="#features">Sobre o sistema</a>
+      <a href="como-funciona.html">Como funciona</a>
+      <a href="ajuda.html">Ajuda</a>
     </nav>
     <div class="topo-dir">
       <button class="icon-busca"><i class="fa-solid fa-magnifying-glass"></i></button>
-      <button class="btn btn-outline"><i class="fa-solid fa-user"></i> Entrar</button>
-      <button class="btn btn-solid"><i class="fa-solid fa-user"></i> + Cadastrar</button>
+      <button class="btn btn-outline" onclick="window.location.href='pages/geral/login/login.html'"><i class="fa-solid fa-user"></i> Entrar</button>
+      <button class="btn btn-solid" onclick="window.location.href='pages/geral/cadastro/cadastro.html'"><i class="fa-solid fa-user"></i> + Cadastrar</button>
     </div>
   </header>
   <main class="hero">
@@ -39,8 +43,8 @@
       <h2>O prontuário do seu animal, sempre com você.</h2>
       <p>O SISVET é uma plataforma segura e integrada que conecta tutores, clínicas e profissionais da saúde animal, garantindo um histórico completo e organizado da saúde do seu pet.</p>
       <div class="botoes">
-        <a class="btn btn-solid btn-lg" href="#"><i class="fa-solid fa-user"></i> Acessar minha conta</a>
-        <a class="btn btn-outline btn-lg" href="#"><i class="fa-solid fa-user"></i> + Criar conta</a>
+        <a class="btn btn-solid btn-lg" href="pages/geral/login/login.html"><i class="fa-solid fa-user"></i> Acessar minha conta</a>
+        <a class="btn btn-outline btn-lg" href="pages/geral/cadastro/cadastro.html"><i class="fa-solid fa-user"></i> + Criar conta</a>
       </div>
     </div>
     <div class="hero-imagem">

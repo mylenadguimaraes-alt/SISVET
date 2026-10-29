@@ -24,6 +24,55 @@ body{font-family:'Inter', sans-serif; background:#F5F5F5; color:#3D3D3D}
 .btn-solid{background:#155BCB; color:#FFFFFF;}
 .btn-lg{padding:13px 20px; text-decoration:none; display:inline-flex; align-items:center; gap:8px}
 
+/* COMPORTAMENTO PADRÃO (DESKTOP) */
+.topo {
+  height: 70px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  border-bottom: 1px solid #E9EEF5; 
+  background: #1351B4;
+  flex-wrap: nowrap; 
+}
+
+.menu {
+  display: flex; 
+  gap: 22px;
+  flex-direction: row;
+}
+
+.menu-toggle {
+  display: none; 
+}
+
+
+/* COMPORTAMENTO MOBILE (TELAS MENORES) */
+@media (max-width: 1080px) {
+  .topo {
+    height: auto; 
+    flex-wrap: wrap; 
+    padding: 10px 0;
+  }
+  
+  .menu-toggle {
+    display: block; 
+    order: 3;
+    margin-right: 16px;
+  }
+
+  .menu {
+    order: 4;
+    display: none; 
+    flex: 1 0 100%;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .menu.aberto {
+    display: flex; 
+  }
+}
+
 /* HERO */
 .hero{display:grid; grid-template-columns: 480px 1fr; background:linear-gradient(180deg, #F2F8FF 0%, #E8F3FF 100%); min-height:520px; overflow:hidden}
 .hero-texto{padding:56px 0 40px 56px}
