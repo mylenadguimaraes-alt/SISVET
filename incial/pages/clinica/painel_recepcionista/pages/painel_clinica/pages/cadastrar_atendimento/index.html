@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Atendimento - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../img/logo.png">
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <header class="titulo-pagina">
+        <div>
+            <h1>Cadastrar Atendimento</h1>
+            <p>Registre um novo atendimento para um tutor e seu animal.</p>
+        </div>
+    </header>
+
+    <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+
+    <section class="cartao">
+
+        <h2>Identificação do tutor</h2>
+
+        <p class="descricao">
+            Informe o CPF para localizar o tutor cadastrado no SISVET.
+        </p>
+
+        <div class="campo">
+            <label for="cpf">CPF do tutor</label>
+
+            <div class="linha-busca">
+                <input
+                    type="text"
+                    id="cpf"
+                    placeholder="000.000.000-00"
+                    maxlength="14"
+                    autocomplete="off"
+                >
+
+                <button type="button" id="buscarTutor" class="botao-salvar">
+                    Buscar tutor
+                </button>
+            </div>
+        </div>
+
+        <div id="dadosTutor" class="dados-tutor" hidden>
+
+            <h3>Dados encontrados</h3>
+
+            <div class="grade-dados">
+                <div>
+                    <span>Nome do tutor</span>
+                    <strong id="nomeTutor"></strong>
+                </div>
+
+                <div>
+                    <span>Telefone</span>
+                    <strong id="telefoneTutor"></strong>
+                </div>
+
+                <div>
+                    <span>E-mail</span>
+                    <strong id="emailTutor"></strong>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <form id="formAtendimento" class="cartao" hidden>
+
+        <h2>Dados do atendimento</h2>
+
+        <p class="descricao">
+            Selecione o animal e informe os dados do atendimento.
+        </p>
+
+        <div class="grade">
+
+            <div class="campo campo-largo">
+                <label for="pet">Animal</label>
+
+                <select id="pet" name="id_pet" required>
+                    <option value="">Selecione um animal</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="data">Data do atendimento</label>
+
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="hora">Horário</label>
+
+                <input
+                    type="time"
+                    id="hora"
+                    name="hora"
+                    required
+                >
+            </div>
+
+            <div class="campo campo-largo">
+                <label for="motivo">Motivo do atendimento</label>
+
+                <input
+                    type="text"
+                    id="motivo"
+                    name="motivo"
+                    maxlength="1000"
+                    placeholder="Ex.: Consulta de rotina, vacinação..."
+                    required
+                >
+            </div>
+
+            <div class="campo campo-largo">
+                <label for="observacoes">Observações (opcional)</label>
+
+                <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    rows="4"
+                    placeholder="Informações adicionais sobre o atendimento..."
+                ></textarea>
+            </div>
+
+        </div>
+
+        <div class="aviso-horario">
+            <strong>Atenção aos horários</strong>
+            <p>
+                A clínica exige um intervalo mínimo de uma hora
+                entre os atendimentos. O sistema verificará a
+                disponibilidade antes de salvar.
+            </p>
+        </div>
+
+        <div class="acoes">
+            <span class="nota">
+                Confira os dados antes de cadastrar.
+            </span>
+
+            <button
+                type="submit"
+                id="botaoCadastrar"
+                class="botao-salvar">
+                Cadastrar atendimento
+            </button>
+        </div>
+
+    </form>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 25px 30px;
+
+    overflow-x: hidden;
+}
+
+/* Mantém os elementos dentro do espaço disponível */
+* {
+    box-sizing: border-box;
+}
+
+/* Margens menores em telas pequenas */
+@media (max-width: 600px) {
+    body {
+        padding: 18px 15px;
+    }
+}

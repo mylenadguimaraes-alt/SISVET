@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Veterinário - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+
+            <div class="titulo-pagina">
+
+                <span class="identificacao">PAINEL DO VETERINÁRIO</span>
+
+                <h1 id="nomeClinica">Carregando clínica...</h1>
+
+                <p>
+                    Bem-vindo ao painel veterinário da clínica.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                id="botaoSair"
+                class="botao-sair">
+
+                Sair da clínica
+
+            </button>
+
+        </header>
+
+
+        <div id="mensagem" class="mensagem"></div>
+
+
+        <section class="cartao">
+
+            <h2>Funcionalidades</h2>
+
+            <p class="descricao">
+                Selecione a funcionalidade que deseja acessar.
+            </p>
+
+
+            <div class="grade-funcionalidades">
+
+                <a
+                    href="pages/visualizar_atendimentos/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">▣</span>
+
+                    <span class="texto-botao">
+
+                        <strong>Visualizar atendimentos do dia</strong>
+
+                        <small>
+                            Consultar os atendimentos agendados para hoje.
+                        </small>
+
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+
+                <a
+                    href="pages/visualizar_animais_autorizados/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">♡</span>
+
+                    <span class="texto-botao">
+
+                        <strong>Visualizar animais autorizados</strong>
+
+                        <small>
+                            Consultar os animais cujos tutores autorizaram o acesso.
+                        </small>
+
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

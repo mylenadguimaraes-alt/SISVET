@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SISVET - Crie sua conta</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="stylecadastro.css">
     <link rel="icon" href="logo.png">
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="sisvetbr">
-      <div style="display: flex; flex-direction: row; align-items: center;">
-        <div style="display:flex; flex-direction: row; align-items: center;">
-          <img style="height: 60px;" src="logo.png" alt="SISVET">
+        <div style="display: flex; flex-direction: row; align-items: center;">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img style="height: 60px;" src="logo.png" alt="SISVET">
+            </div>
+
+            <div style="display: flex; flex-direction: column; line-height: 20px; color: white;">
+                <h2>SISVET</h2>
+                <p style="font-weight: bold;">Sistema integrado de Saúde Veterinária</p>
+            </div>
         </div>
-        <div style=" display: flex; flex-direction: column; line-height: 20px; color: white;">
-          <h2>SISVET</h2>
-          <p style="font-weight: bold;">Sistema integrado de Saúde Veterinária</p>
-        </div>
-      </div>
     </header>
+
     <main>
-      <div class="container">
-        <div class="form">
-          <h2>Crie sua conta</h2>
-          <p class="subtitle">Como você quer se cadastrar?</p>
-          <div class="choice">
-            <a class="card-choice" href="cadastro-tutor.html">
-              <h3>Tutor</h3>
-              <p>Acesse o prontuário do seu pet.</p>
-              <span class="btn">Cadastrar como tutor</span>
-            </a>
-            <a class="card-choice" href="cadastro-veterinario.html">
-              <h3>Veterinário</h3>
-              <p>Atendimento clínico e prontuário do pet.</p>
-              <span class="btn">Cadastrar como veterinário</span>
-            </a>
-            <a class="card-choice" href="cadastro-clinica.html">
-              <h3>Clínica</h3>
-              <p>Gestão da clínica e licenciamento.</p>
-              <span class="btn">Cadastrar como clínica</span>
-            </a>
-          </div>
-          <p class="back"><a href="../../../pages/geral/login/login.html">Já tem conta? Entrar</a></p>
+        <div class="container">
+            <div class="form">
+                <h2>Crie sua conta</h2>
+                <p class="subtitle">Como você quer se cadastrar?</p>
+
+                <div class="choice">
+                    <!-- Cadastro de tutor -->
+                    <a class="card-choice" href="cadastro-tutor.html">
+                        <h3>Tutor</h3>
+                        <p>Acesse o prontuário do seu pet.</p>
+                        <span class="btn">Cadastrar como tutor</span>
+                    </a>
+
+                    <!-- Cadastro de veterinário -->
+                    <a class="card-choice" href="cadastro-veterinario.html">
+                        <h3>Veterinário</h3>
+                        <p>Atendimento clínico e prontuário do pet.</p>
+                        <span class="btn">Cadastrar como veterinário</span>
+                    </a>
+
+                    <!-- Cadastro de dono -->
+                    <a class="card-choice" href="cadastrar_dono.html">
+                        <h3>Dono</h3>
+                        <p>Gerencie suas clínicas e funcionários.</p>
+                        <span class="btn">Cadastrar como dono</span>
+                    </a>
+
+                    <!-- Cadastro de recepcionista -->
+                    <a class="card-choice" href="cadastrar_recepcionista.html">
+                        <h3>Recepcionista</h3>
+                        <p>Atendimento, agendamentos e organização da clínica.</p>
+                        <span class="btn">Cadastrar como recepcionista</span>
+                    </a>
+                </div>
+
+                <p class="back">
+                    <a href="../login/escolha.html">Já tem conta? Entrar</a>
+                </p>
+            </div>
+
+            <aside class="info">
+                <div class="paw">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+
+                <h3>Juntos por uma vida mais saudável.</h3>
+
+                <p>
+                    Ao utilizar o SISVET, você poderá acessar os recursos
+                    correspondentes ao seu perfil, ajudando a manter as
+                    informações de saúde dos animais organizadas e facilitando
+                    o atendimento veterinário.
+                </p>
+            </aside>
         </div>
-        <aside class="info">
-          <div class="paw"><i class="fa-solid fa-paw"></i></div>
-          <h3>Juntos por uma vida mais saudável.</h3>
-          <p>Ao criar sua conta, você terá acesso ao prontuário do seu pet, às clínicas autorizadas e a todas as informações importantes sobre a saúde dele.</p>
-        </aside>
-      </div>
     </main>
+
     <footer class="rodape">
-      <div class="rodape-esq">
-        <div class="brand-footer"><strong>SISVET</strong><span>Sistema Integrado de Saúde Veterinária</span></div>
-      </div>
-      <div><p class="copy">© 2024 - SISVET. Todos os direitos reservados.</p></div>
-      <div class="rodape-links">
-        <a href="#">Acessibilidade</a><span>|</span><a href="#">Termos de uso</a><span>|</span><a href="#">Privacidade</a>
-      </div>
+        <div class="rodape-esq">
+            <div class="brand-footer">
+                <strong>SISVET</strong>
+                <span>Sistema Integrado de Saúde Veterinária</span>
+            </div>
+        </div>
+
+        <div>
+            <p class="copy">© 2024 - SISVET. Todos os direitos reservados.</p>
+        </div>
+
+        <div class="rodape-links">
+            <a href="#">Acessibilidade</a>
+            <span>|</span>
+            <a href="#">Termos de uso</a>
+            <span>|</span>
+            <a href="#">Privacidade</a>
+        </div>
     </footer>
-  </body>
+    
+</body>
 </html>

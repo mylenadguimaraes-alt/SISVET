@@ -1,0 +1,399 @@
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #1351B4;
+    --azul-escuro: #0B3478;
+    --azul-claro: #EAF2FF;
+    --fundo: #F5F5F5;
+    --branco: #FFFFFF;
+    --texto: #202B3C;
+    --texto-secundario: #667085;
+    --borda: #D9E0EA;
+    --verde: #067647;
+    --verde-claro: #ECFDF3;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.pagina-clinicas {
+    width: 100%;
+    padding: 22px;
+}
+
+/* ========================================
+   CABEÇALHO
+   Compatível com .topo e .cabecalho
+======================================== */
+
+.topo,
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.topo h1,
+.cabecalho h1,
+.titulo-area h1 {
+    font-size: 23px;
+    color: var(--azul-escuro);
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+
+.topo p,
+.cabecalho p,
+.titulo-area p {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+/* Contador opcional */
+
+.contador {
+    flex-shrink: 0;
+    padding: 8px 11px;
+    border-radius: 20px;
+    background: var(--azul-claro);
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ========================================
+   ÁREA DE CONTEÚDO
+======================================== */
+
+.conteudo-clinicas {
+    width: 100%;
+}
+
+/* ========================================
+   PESQUISA
+   Compatível com .pesquisa e .barra-pesquisa
+======================================== */
+
+.pesquisa,
+.barra-pesquisa {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.pesquisa input,
+.barra-pesquisa input {
+    display: block;
+    width: 100%;
+    height: 43px;
+    padding: 0 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+
+    background: var(--branco);
+    color: var(--texto);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pesquisa input:focus,
+.barra-pesquisa input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(19, 81, 180, 0.10);
+}
+
+/* ========================================
+   LISTA DE CLÍNICAS
+======================================== */
+
+.lista-clinicas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+/* Mensagens de carregamento e erro */
+
+.carregando,
+.erro-carregamento {
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    border-radius: 8px;
+}
+
+.carregando {
+    color: var(--texto-secundario);
+    background: var(--branco);
+    border: 1px solid var(--borda);
+}
+
+.erro-carregamento {
+    color: #B42318;
+    background: #FEF3F2;
+    border: 1px solid #FECDCA;
+}
+
+/* ========================================
+   CARTÃO DA CLÍNICA
+======================================== */
+
+.bloco-clinica {
+    width: 100%;
+    padding: 19px;
+
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    box-shadow: 0 2px 5px rgba(16, 24, 40, 0.03);
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bloco-clinica:hover {
+    border-color: #B6CCF1;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+/* ========================================
+   NOME E ÍCONE DA CLÍNICA
+======================================== */
+
+.clinica-topo {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 19px;
+}
+
+.icone-clinica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    background: var(--azul-claro);
+    border-radius: 9px;
+
+    font-size: 23px;
+}
+
+.nome-area {
+    min-width: 0;
+}
+
+.nome-clinica {
+    color: var(--azul-escuro);
+    font-size: 17px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   SITUAÇÃO DA CLÍNICA
+======================================== */
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde);
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ========================================
+   DADOS DA CLÍNICA
+======================================== */
+
+.dados-clinica {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #EAECF0;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.dado {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.rotulo {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+.dado p,
+.dado > span:not(.rotulo) {
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   AÇÕES E BOTÃO DE DETALHES
+======================================== */
+
+.acoes-clinica {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.btn-detalhes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 9px 13px;
+
+    border: 1px solid var(--azul);
+    border-radius: 7px;
+
+    background: var(--azul);
+    color: var(--branco);
+
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: background 0.2s;
+}
+
+.btn-detalhes:hover {
+    background: var(--azul-escuro);
+}
+
+.btn-detalhes:focus-visible {
+    outline: 3px solid rgba(19, 81, 180, 0.25);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   LISTA VAZIA
+======================================== */
+
+.mensagem-vazia {
+    padding: 35px 20px;
+    text-align: center;
+
+    background: var(--branco);
+    border: 1px dashed var(--borda);
+    border-radius: 10px;
+}
+
+.icone-vazio {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 32px;
+}
+
+.mensagem-vazia h2 {
+    margin-bottom: 9px;
+    font-size: 17px;
+    color: var(--azul-escuro);
+}
+
+.mensagem-vazia p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sem-resultados {
+    padding: 20px;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+/* Não exibir itens ocultados pela pesquisa */
+
+.bloco-clinica[hidden],
+.sem-resultados[hidden] {
+    display: none;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 480px) {
+    .pagina-clinicas {
+        padding: 15px 10px;
+    }
+
+    .topo,
+    .cabecalho {
+        align-items: flex-start;
+    }
+
+    .topo h1,
+    .cabecalho h1,
+    .titulo-area h1 {
+        font-size: 20px;
+    }
+
+    .contador {
+        font-size: 11px;
+    }
+
+    .bloco-clinica {
+        padding: 15px;
+    }
+
+    .dados-clinica {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .acoes-clinica {
+        justify-content: stretch;
+    }
+
+    .btn-detalhes {
+        width: 100%;
+    }
+}

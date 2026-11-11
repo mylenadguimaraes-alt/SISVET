@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalhes do Pet - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+            <div>
+                <h1>Detalhes do Pet</h1>
+                <p>Consulte e atualize as informações do seu animal.</p>
+            </div>
+
+            <a href="../meus_pets/index.php" class="botao botao-voltar">
+                Voltar
+            </a>
+        </header>
+
+        <div id="mensagem" class="mensagem" role="alert" hidden></div>
+
+        <section class="card">
+
+            <div class="identificacao">
+                <div>
+                    <h2 id="nomeTitulo">Carregando...</h2>
+                    <p id="especieTitulo"></p>
+                </div>
+
+                <button type="button" id="botaoFoto" class="botao botao-foto" hidden>
+                    Visualizar foto
+                </button>
+            </div>
+
+            <form id="formPet">
+
+                <div class="titulo-secao">
+                    <h3>Informações do animal</h3>
+                </div>
+
+                <div class="grade">
+
+                    <div class="campo">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" maxlength="100" required disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="especie">Espécie *</label>
+                        <input type="text" id="especie" name="especie" maxlength="50" required disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="raca">Raça</label>
+                        <input type="text" id="raca" name="raca" maxlength="100" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo" name="sexo" disabled>
+                            <option value="Não informado">Não informado</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Fêmea">Fêmea</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data_nascimento">Data de nascimento</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" name="peso" min="0.01" max="9999.99" step="0.01" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cor">Cor</label>
+                        <input type="text" id="cor" name="cor" maxlength="50" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="porte">Porte</label>
+                        <input type="text" id="porte" name="porte" maxlength="30" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="microchip">Microchip</label>
+                        <input type="text" id="microchip" name="microchip" maxlength="50" disabled>
+                    </div>
+
+                    <div class="campo">
+                        <label for="castrado">Castrado</label>
+                        <select id="castrado" name="castrado" disabled>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="observacoes">Observações</label>
+                        <textarea id="observacoes" name="observacoes" rows="4" disabled></textarea>
+                    </div>
+
+                </div>
+
+                <div class="acoes">
+
+                    <button type="button" id="botaoEditar" class="botao">
+                        Editar dados
+                    </button>
+
+                    <button type="button" id="botaoCancelar" class="botao botao-secundario" hidden>
+                        Cancelar
+                    </button>
+
+                    <button type="submit" id="botaoSalvar" class="botao botao-salvar" hidden>
+                        Salvar alterações
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <p class="data-cadastro">
+            Cadastro realizado em:
+            <span id="dataCadastro">-</span>
+        </p>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

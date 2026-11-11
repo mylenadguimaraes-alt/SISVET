@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Início Veterinário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SAUDAÇÃO -->
+    <section class="saudacao">
+        <h1 id="saudacao-veterinario">Olá, <span id="nome">doutor(a)</span>!</h1>
+        <p>Acompanhe as clínicas contratadas e o estado dos seus contratos.</p>
+    </section>
+
+    <!-- CARTÕES DE RESUMO -->
+    <section class="cartoes">
+
+        <!-- CLÍNICAS CONTRATADAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas contratadas</h3>
+                    <p>Unidades com vínculo ativo</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-hospital"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-contratadas">0</span>
+            </div>
+        </article>
+
+        <!-- CLÍNICAS DEMITIDAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas demitidas</h3>
+                    <p>Com contratos encerrados</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-demitidas">0</span>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- BOAS-VINDAS -->
+    <section class="boas-vindas">
+        <span class="etiqueta">
+            <i class="fa-solid fa-user-doctor"></i>
+            Área do Veterinário
+        </span>
+        <h1>Bem-vindo(a) ao painel médico do SISVET!</h1>
+        <p>
+            Aqui você pode acessar o histórico clínico nas clínicas contratadas e visualizar o estado dos seus contratos vigentes e encerrados.
+        </p>
+    </section>
+
+    <!-- RECURSOS -->
+    <h2 class="titulo-secao">O que você pode fazer?</h2>
+
+    <section class="recursos">
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-hospital-user"></i>
+            </div>
+            <div>
+                <h3>Entrar nas clínicas contratadas</h3>
+                <p>Alterne entre as unidades em que possui contrato ativo para realizar atendimentos e registrar prontuários.</p>
+            </div>
+        </article>
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <div>
+                <h3>Consultar meus contratos</h3>
+                <p>Visualize os detalhes dos seus contratos ativos e demitidos, carga horária semanal e observações.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- MENSAGEM FINAL -->
+    <section class="mensagem">
+        <h3>Excelência no cuidado com a saúde animal!</h3>
+        <p>Mantenha os prontuários atualizados e verifique sempre os dados dos contratos e permissões de acesso às unidades.</p>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

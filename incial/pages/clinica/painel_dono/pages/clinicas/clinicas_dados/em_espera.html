@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínicas em espera | SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="pagina-clinicas">
+
+        <div class="topo">
+            <div>
+                <h1>Clínicas em espera</h1>
+                <p>Clínicas que ainda estão aguardando autorização para acessar o sistema.</p>
+            </div>
+        </div>
+
+        <div class="pesquisa">
+            <input
+            type="search"
+            id="pesquisaClinica"
+            placeholder="Pesquisar clínica pelo nome..."
+            aria-label="Pesquisar clínica pelo nome"
+            >
+        </div>
+
+        <section class="lista-clinicas" id="listaClinicas" aria-live="polite">
+            <p>Carregando clínicas em espera...</p>
+        </section>
+
+    </main>
+
+    <script src="js/em_espera.js"></script>
+
+</body>
+</html>

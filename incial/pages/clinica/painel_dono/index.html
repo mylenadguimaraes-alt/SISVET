@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Dono da Clínica | SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ========================================
+         MENU LATERAL FIXO
+    ========================================= -->
+
+    <aside class="menu-lateral">
+
+        <!-- LOGO -->
+        <a href="pages/iframe/index.html"
+           class="logo"
+           target="frame_art"
+           aria-label="Página inicial do SISVET">
+
+            <img src="img/logo.png" alt="Logo SISVET">
+
+            <span>SISVET</span>
+        </a>
+
+        <!-- NAVEGAÇÃO -->
+        <nav class="menu-principal" aria-label="Menu principal">
+
+
+            <!-- INÍCIO -->
+            <a href="pages/iframe/index.html"
+               class="menu-link"
+               target="frame_art">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <span>Início</span>
+            </a>
+
+            <!-- DADOS PESSOAIS -->
+            <a href="pages/dados_pessoais/index.html"
+               class="menu-link"
+               target="frame_art">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Dados pessoais</span>
+            </a>
+
+            <!-- MENU CLÍNICAS -->
+            <div class="menu-dropdown">
+
+                <button type="button"
+                        class="menu-botao"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-hospital" aria-hidden="true"></i>
+
+                    <span class="texto-menu">Clínicas</span>
+
+                    <i class="fa-solid fa-chevron-down seta-menu"
+                       aria-hidden="true"></i>
+                </button>
+
+                <div class="submenu">
+
+                    <a href="pages/clinicas/cadastrar_clinica/index.html"
+                       target="frame_art">
+                        Cadastrar clínicas
+                    </a>
+
+                    <a href="pages/clinicas/clinicas_dados/autorizadas.html"
+                       target="frame_art">
+                        Clínicas autorizadas
+                    </a>
+
+                    <a href="pages/clinicas/clinicas_dados/em_espera.html"
+                       target="frame_art">
+                        Clínicas em espera
+                    </a>
+
+                    <a href="pages/clinicas/clinicas_dados/suspensas.html"
+                       target="frame_art">
+                        Clínicas suspensas
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- MENU FUNCIONÁRIOS -->
+            <div class="menu-dropdown">
+
+                <button type="button"
+                        class="menu-botao"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+
+                    <span class="texto-menu">Funcionários</span>
+
+                    <i class="fa-solid fa-chevron-down seta-menu"
+                       aria-hidden="true"></i>
+                </button>
+
+                <div class="submenu submenu-funcionarios">
+
+                    <!-- VETERINÁRIOS -->
+                    <div class="submenu-grupo">
+
+                        <span class="submenu-titulo">
+                            Veterinários
+                        </span>
+
+                        <a href="pages/veterinario/contrato/index.html"
+                           target="frame_art">
+                            Cadastrar contrato
+                        </a>
+
+                        <a href="../../../../bd_conexao/php/detalhe_contrato_veterinario.php?status=contratada"
+                           target="frame_art">
+                            Contratados
+                        </a>
+
+                        <a href="../../../../bd_conexao/php/detalhe_contrato_veterinario.php?status=demitido"
+                           target="frame_art">
+                            Demitidos
+                        </a>
+
+                    </div>
+
+                    <!-- RECEPCIONISTAS -->
+                    <div class="submenu-grupo">
+
+                        <span class="submenu-titulo">
+                            Recepcionistas
+                        </span>
+
+                        <a href="pages/recepcionista/contrato/index.html"
+                           target="frame_art">
+                            Cadastrar contrato
+                        </a>
+
+                        <a href="../../../../bd_conexao/php/dados_recepcionista.php?status=contratada"
+                           target="frame_art">
+                            Contratados
+                        </a>
+
+                        <a href="../../../../bd_conexao/php/dados_recepcionista.php?status=demitida"
+                           target="frame_art">
+                            Demitidos
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- SAIR FIXADO NA PARTE INFERIOR -->
+        <div class="menu-inferior">
+
+            <a
+                href="../../../../bd_conexao/php/encerrar.php"
+                class="menu-link sair"
+            >
+                <i
+                    class="fa-solid fa-right-from-bracket"
+                    aria-hidden="true"
+                ></i>
+
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ========================================
+         CABEÇALHO FIXO
+    ========================================= -->
+
+    <header class="cabecalho">
+
+        <div class="cabecalho-texto">
+
+            <h1>Painel do dono da clínica</h1>
+
+            <p>
+                Gerencie suas clínicas e seus funcionários.
+            </p>
+
+        </div>
+
+        <!-- PERFIL DO DONO -->
+        <div class="perfil-resumo">
+
+            <div class="avatar">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+            </div>
+
+            <span id="nome_completo">
+                Carregando...
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
+
+    <main class="conteudo-principal">
+
+        <section class="area-iframe">
+
+            <iframe
+                id="frame1"
+                name="frame_art"
+                src="pages/iframe/index.html"
+                title="Conteúdo do perfil do dono da clínica"
+                scrolling="auto"
+            ></iframe>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         SCRIPTS EXISTENTES
+    ========================================= -->
+
+    <script src="js/iframe.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

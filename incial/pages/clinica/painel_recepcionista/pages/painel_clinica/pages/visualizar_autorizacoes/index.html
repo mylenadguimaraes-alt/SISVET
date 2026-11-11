@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visualizar Autorizações - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../../img/logo.png">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="titulo-pagina">
+            <h1>Autorizações</h1>
+            <p>Consulte as solicitações de autorização dos tutores.</p>
+        </header>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <section class="cartao">
+
+            <!-- PESQUISA GERAL -->
+            <div class="barra-pesquisa">
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar por tutor, CPF, pet, espécie ou raça..."
+                    autocomplete="off">
+            </div>
+
+            <!-- EM ESPERA -->
+            <div class="secao">
+
+                <h2>Em espera</h2>
+                <p class="descricao">Solicitações aguardando resposta do tutor.</p>
+
+                <div id="listaEspera" class="lista-autorizacoes">
+                    <p class="carregando">Carregando...</p>
+                </div>
+
+            </div>
+
+            <!-- CONFIRMADAS -->
+            <div class="secao">
+
+                <h2>Confirmadas</h2>
+                <p class="descricao">Autorizações aprovadas.</p>
+
+                <div id="listaConfirmadas" class="lista-autorizacoes">
+                    <p class="carregando">Carregando...</p>
+                </div>
+
+            </div>
+
+            <!-- NEGADAS -->
+            <div class="secao">
+
+                <h2>Negadas</h2>
+                <p class="descricao">Solicitações recusadas.</p>
+
+                <div id="listaNegadas" class="lista-autorizacoes">
+                    <p class="carregando">Carregando...</p>
+                </div>
+
+            </div>
+
+            <!-- REVOGADAS -->
+            <div class="secao">
+
+                <h2>Revogadas</h2>
+                <p class="descricao">Autorizações revogadas.</p>
+
+                <div id="listaRevogadas" class="lista-autorizacoes">
+                    <p class="carregando">Carregando...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

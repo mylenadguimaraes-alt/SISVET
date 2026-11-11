@@ -1,0 +1,261 @@
+
+:root {
+    --azul: #1351B4;
+    --azul-escuro: #0B3478;
+    --fundo: #EEF2FA;
+    --branco: #FFFFFF;
+    --texto: #202B3C;
+    --texto-suave: #667085;
+    --borda: #D9E0EA;
+    --vermelho: #D92D20;
+    --verde: #067647;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+.pagina {
+    width: min(1100px, 94%);
+    margin: 35px auto;
+}
+
+.titulo-pagina {
+    margin-bottom: 25px;
+}
+
+.titulo-pagina h1 {
+    color: var(--azul-escuro);
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p,
+.texto-suave {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.cartao {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.cartao h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: var(--azul-escuro);
+}
+
+.campo-busca {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex: 1;
+    min-width: 0;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    background: #FFFFFF;
+    color: var(--texto);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--azul);
+}
+
+.campo input[readonly] {
+    background: #F5F7FA;
+}
+
+.campo small {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.grade-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.botao-principal,
+.botao-secundario,
+.botao-cancelar {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.botao-principal {
+    background: var(--azul);
+    color: white;
+}
+
+.botao-principal:hover {
+    background: var(--azul-escuro);
+}
+
+.botao-secundario {
+    background: #EAF2FF;
+    color: var(--azul-escuro);
+    border: 1px solid #C7D9F5;
+}
+
+.botao-secundario:hover {
+    background: #DCEAFF;
+}
+
+.botao-cancelar {
+    background: #FEECEB;
+    color: var(--vermelho);
+}
+
+.botao-cancelar:hover {
+    background: #FBD7D4;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.documentos-acoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--borda);
+    padding-top: 22px;
+    margin-top: 25px;
+}
+
+.area-documento {
+    margin-top: 25px;
+    padding: 22px;
+    background: #F8FAFD;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+}
+
+.area-documento h3 {
+    font-size: 17px;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    display: none;
+    padding: 13px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.mensagem.sucesso {
+    display: block;
+    background: #ECFDF3;
+    color: var(--verde);
+}
+
+.mensagem.erro {
+    display: block;
+    background: #FEF3F2;
+    color: var(--vermelho);
+}
+
+.mensagem.aviso {
+    display: block;
+    background: #FFFAEB;
+    color: #93370D;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 650px) {
+
+    .pagina {
+        margin: 20px auto;
+    }
+
+    .cartao {
+        padding: 18px;
+    }
+
+    .campo-busca {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .grade-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .documentos-acoes {
+        flex-direction: column;
+    }
+
+    .documentos-acoes a,
+    .documentos-acoes button {
+        width: 100%;
+    }
+}

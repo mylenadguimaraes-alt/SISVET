@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel da Recepcionista - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../img/logo.png">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+
+            <div class="titulo-pagina">
+                <span class="identificacao">PAINEL DA RECEPÇÃO</span>
+
+                <h1 id="nomeClinica">Carregando clínica...</h1>
+
+                <p>
+                    Bem-vinda ao painel de atendimento da clínica.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                id="botaoSair"
+                class="botao-sair">
+                Sair da clínica
+            </button>
+
+        </header>
+
+
+        <div id="mensagem" class="mensagem"></div>
+
+
+        <section class="cartao">
+
+            <h2>Funcionalidades</h2>
+
+            <p class="descricao">
+                Selecione a funcionalidade que deseja acessar.
+            </p>
+
+
+            <div class="grade-funcionalidades">
+
+                <a
+                    href="pages/cadastrar_atendimento/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">＋</span>
+
+                    <span class="texto-botao">
+                        <strong>Cadastrar atendimento</strong>
+
+                        <small>
+                            Registrar um novo atendimento.
+                        </small>
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+
+                <a
+                    href="pages/solicitar_autorizacao/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">✉</span>
+
+                    <span class="texto-botao">
+                        <strong>Solicitar autorização</strong>
+
+                        <small>
+                            Solicitar autorização para acessar informações.
+                        </small>
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+
+                <a
+                    href="pages/visualizar_autorizacoes/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">☷</span>
+
+                    <span class="texto-botao">
+                        <strong>Visualizar autorizações</strong>
+
+                        <small>
+                            Consultar as autorizações recebidas.
+                        </small>
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+                <a
+                    href="pages/visualizar_agendamentos/index.html"
+                    class="botao-funcionalidade">
+
+                    <span class="icone">▣</span>
+
+                    <span class="texto-botao">
+                        <strong>Visualizar agendamentos</strong>
+
+                        <small>
+                            Consultar os atendimentos agendados na clínica.
+                        </small>
+                    </span>
+
+                    <span class="seta">›</span>
+
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/painel_recepcionista.js"></script>
+
+</body>
+</html>

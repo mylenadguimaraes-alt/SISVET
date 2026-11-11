@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Clínicas autorizadas | SISVET</title>
+</head>
+<body>
+
+
+    <main class="pagina-clinicas">
+        <div class="topo">
+            <div>
+                <h1>Clínicas autorizadas</h1>
+                <p>Clínicas autorizadas vinculadas à sua conta.</p>
+            </div>
+        </div>
+
+        <div class="pesquisa">
+            <input
+                type="search"
+                id="pesquisaClinica"
+                placeholder="Pesquisar clínica pelo nome..."
+                aria-label="Pesquisar clínica pelo nome"
+            >
+        </div>
+
+        <section class="lista-clinicas" id="listaClinicas" aria-live="polite">
+            <p>Carregando clínicas autorizadas...</p>
+        </section>
+
+    </main>
+
+    <script src="js/autorizadas.js"></script>
+
+</body>
+</html>

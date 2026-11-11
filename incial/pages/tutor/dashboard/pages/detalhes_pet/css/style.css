@@ -1,0 +1,259 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #EEF2FA;
+    color: #202B3C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+    .cabecalho h1 {
+        margin: 0 0 8px;
+        color: #0B3478;
+        font-size: 27px;
+    }
+
+    .cabecalho p {
+        margin: 0;
+        color: #667085;
+        font-size: 14px;
+    }
+
+.card {
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #D9E0EA;
+    border-radius: 12px;
+}
+
+.identificacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+    .identificacao h2 {
+        margin: 0 0 8px;
+        color: #0B3478;
+        font-size: 23px;
+    }
+
+    .identificacao p {
+        margin: 0;
+        color: #667085;
+        font-size: 14px;
+    }
+
+.titulo-secao {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #D9E0EA;
+}
+
+    .titulo-secao h3 {
+        margin: 0;
+        color: #0B3478;
+        font-size: 18px;
+    }
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    color: #475467;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D9E0EA;
+    border-radius: 7px;
+    background: #F9FAFB;
+    color: #202B3C;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+    .campo input:disabled,
+    .campo select:disabled,
+    .campo textarea:disabled {
+        background: #F2F4F7;
+        color: #475467;
+        cursor: default;
+        opacity: 1;
+    }
+
+    .campo input:not(:disabled),
+    .campo select:not(:disabled),
+    .campo textarea:not(:disabled) {
+        background: #FFFFFF;
+        border-color: #1351B4;
+    }
+
+    .campo input:focus,
+    .campo select:focus,
+    .campo textarea:focus {
+        box-shadow: 0 0 0 3px rgba(19, 81, 180, 0.12);
+    }
+
+.campo textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #1351B4;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .botao:hover {
+        background: #0B3478;
+    }
+
+.botao-secundario {
+    background: #667085;
+}
+
+    .botao-secundario:hover {
+        background: #475467;
+    }
+
+.botao-foto {
+    background: #EAF2FF;
+    border: 1px solid #1351B4;
+    color: #1351B4;
+}
+
+    .botao-foto:hover {
+        background: #D5E5FF;
+        color: #0B3478;
+    }
+
+.botao-salvar {
+    background: #067647;
+}
+
+    .botao-salvar:hover {
+        background: #05603A;
+    }
+
+.mensagem {
+    margin-bottom: 20px;
+    padding: 15px 18px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+    .mensagem.sucesso {
+        color: #067647;
+        background: #ECFDF3;
+        border-color: #A6F4C5;
+    }
+
+    .mensagem.erro {
+        color: #B42318;
+        background: #FEF3F2;
+        border-color: #FECDCA;
+    }
+
+.data-cadastro {
+    margin-top: 18px;
+    color: #667085;
+    font-size: 12px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+        .acoes .botao {
+            width: 100%;
+        }
+}

@@ -1,0 +1,109 @@
+:root {
+    --azul: #1351B4;
+    --azul-escuro: #0B3478;
+    --fundo: #F5F5F5;
+    --branco: #FFFFFF;
+    --texto: #202B3C;
+    --texto-secundario: #667085;
+    --borda: #D9E0EA;
+    --vermelho: #D92D20;
+    --verde: #067647;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 4px 14px rgba(11, 52, 120, 0.05);
+}
+
+.cabecalho {
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 15px;
+}
+
+    .cabecalho h1 {
+        margin: 0 0 6px;
+        color: var(--azul-escuro);
+        font-size: 24px;
+    }
+
+    .cabecalho p {
+        margin: 0;
+        color: var(--texto-secundario);
+        font-size: 14px;
+    }
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--texto);
+    background-color: #FCFCFD;
+    width: 100%;
+    outline: none;
+}
+
+input:focus {
+    outline: 2px solid var(--azul);
+    border-color: transparent;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    border-top: 1px solid var(--borda);
+    padding-top: 20px;
+}
+
+.botao-salvar {
+    background-color: var(--azul);
+    color: #FFF;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+    .botao-salvar:hover {
+        background-color: var(--azul-escuro);
+    }

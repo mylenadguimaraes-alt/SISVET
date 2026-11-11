@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Início Administrador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SAUDAÇÃO -->
+    <section class="saudacao">
+        <h1 id="saudacao-admin">Olá, <span id="nome">administrador(a)</span>!</h1>
+        <p>Monitore o status das unidades veterinárias, aprovações e denúncias do sistema.</p>
+    </section>
+    
+    <!-- CARTÕES DE RESUMO -->
+    <section class="cartoes">
+
+        <!-- CLÍNICAS AUTORIZADAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas autorizadas</h3>
+                    <p>Unidades ativas na plataforma</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-hospital"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-autorizadas">0</span>
+            </div>
+        </article>
+
+        <!-- CLÍNICAS EM ESPERA -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas em espera</h3>
+                    <p>Aguardando aprovação de cadastro</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-espera">0</span>
+            </div>
+        </article>
+
+        <!-- CLÍNICAS SUSPENSAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas suspensas</h3>
+                    <p>Unidades com acesso bloqueado</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-suspensas">0</span>
+            </div>
+        </article>
+
+        <!-- DENÚNCIAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Denúncias</h3>
+                    <p>Relatos pendentes de análise</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-denuncias">0</span>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- BOAS-VINDAS -->
+    <section class="boas-vindas">
+        <span class="etiqueta">
+            <i class="fa-solid fa-user-shield"></i>
+            Área do Administrador
+        </span>
+        <h1>Bem-vindo(a) ao painel de controle geral do SISVET!</h1>
+        <p>
+            Aqui você gerencia aprovações de novas clínicas, fiscaliza unidades suspensas e acompanha denúncias de tutores para garantir a integridade da plataforma.
+        </p>
+    </section>
+
+    <!-- RECURSOS -->
+    <h2 class="titulo-secao">O que você pode fazer?</h2>
+
+    <section class="recursos">
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-check-to-slot"></i>
+            </div>
+            <div>
+                <h3>Gerenciar aprovações de clínicas</h3>
+                <p>Analise a documentação e autorize ou rejeite novos cadastros de unidades veterinárias na fila de espera.</p>
+            </div>
+        </article>
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div>
+                <h3>Auditar denúncias e suspensões</h3>
+                <p>Investigue relatos enviados por tutores, aplique suspensões em clínicas irregulares e revise status de penalidades.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- MENSAGEM FINAL -->
+    <section class="mensagem">
+        <h3>Gestão e conformidade em primeiro lugar!</h3>
+        <p>Mantenha a moderação do sistema ativa e assegure a qualidade dos serviços prestados em toda a rede veterinária.</p>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visualizar Atendimentos - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <header class="titulo-pagina">
+        <h1>Atendimentos</h1>
+        <p>Consulte e gerencie os atendimentos da clínica.</p>
+    </header>
+
+    <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+
+    <section class="cartao">
+
+        <div class="barra-pesquisa">
+            <input
+                type="search"
+                id="pesquisa"
+                placeholder="Pesquisar por tutor, CPF, pet, data ou motivo..."
+                autocomplete="off">
+        </div>
+
+        <!-- ATENDIMENTOS DE HOJE -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <div>
+                    <h2>Atendimentos de hoje</h2>
+                    <p>Consultas agendadas para o dia atual.</p>
+                </div>
+
+                <span class="contador" id="contadorHoje">0</span>
+            </div>
+
+            <div id="listaHoje" class="lista-atendimentos">
+                <p class="carregando">Carregando atendimentos...</p>
+            </div>
+
+        </section>
+
+
+        <!-- PRÓXIMOS DIAS -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <div>
+                    <h2>Próximos dias</h2>
+                    <p>Consultas que ainda serão realizadas.</p>
+                </div>
+
+                <span class="contador" id="contadorProximos">0</span>
+            </div>
+
+            <div id="listaProximos" class="lista-atendimentos">
+                <p class="carregando">Carregando atendimentos...</p>
+            </div>
+
+        </section>
+
+
+        <!-- NÃO COMPARECEU -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <div>
+                    <h2>Não compareceu</h2>
+                    <p>Atendimentos cujo horário passou e não foram finalizados.</p>
+                </div>
+
+                <span class="contador" id="contadorAusentes">0</span>
+            </div>
+
+            <div id="listaAusentes" class="lista-atendimentos">
+                <p class="carregando">Carregando atendimentos...</p>
+            </div>
+
+        </section>
+
+
+        <!-- AGENDAMENTOS PASSADOS -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <div>
+                    <h2>Agendamentos passados</h2>
+                    <p>Histórico de atendimentos realizados e cancelados.</p>
+                </div>
+
+                <span class="contador" id="contadorPassados">0</span>
+            </div>
+
+            <div id="listaPassados" class="lista-atendimentos">
+                <p class="carregando">Carregando atendimentos...</p>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

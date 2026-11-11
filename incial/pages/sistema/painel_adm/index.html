@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="menu-lateral">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo SISVET">
+            <h2>SISVET</h2>
+        </div>
+
+        <nav class="menu">
+
+            <a href="pages/iframe/index.html"
+               target="conteudo"
+               class="menu-item ativo">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="../../../../bd_conexao/php/meu_perfil_admin.php"
+               target="conteudo"
+               class="menu-item ativo">
+                <i class="fa-solid fa-user"></i>
+                <span>Meu perfil</span>
+            </a>
+
+            <a href="pages/cadastrar_adm/index.html"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Cadastrar administrador</span>
+            </a>
+
+            <a href="../../../../bd_conexao/php/clinicas_adm.php"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Clínicas cadastradas</span>
+            </a>
+
+            <a href="../../../../bd_conexao/php/gerenciar_denucias.php"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Denúncias de clínicas</span>
+            </a>
+
+
+            <a href="../../../../bd_conexao/php/suspender_clinica.php"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Suspender clínicas</span>
+            </a>
+
+
+        </nav>
+
+        <div class="menu-rodape">
+            <a href="../../../../bd_conexao/php/encerrar.php" class="menu-item">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="area-principal">
+        <header class="cabecalho">
+            <div>
+                <h1>Painel do administrador</h1>
+                <p>Bem-vinda ao SISVET</p>
+            </div>
+
+            <div class="perfil">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="nome">Administrador</span>
+            </div>
+        </header>
+        <main class="conteudo">
+            <iframe
+                src="pages/iframe/index.html"
+                name="conteudo"
+                title="Conteúdo do painel"
+                class="iframe-conteudo">
+            </iframe>
+        </main>
+    </div>
+
+    <script src="js/iframe.js"></script>
+    <script src="js/script.js"></script>
+    
+    
+</body>
+</html>

@@ -1,72 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SISVET - Acesse sua conta</title>
-        <link rel="stylesheet" href="stylelogin.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-        <link rel="icon" href="logo.png">
-    </head>
-    <body>
-        <header class="topo">
-            <div style="display: flex; flex-direction: row; align-items: center;">
-                <div style="display:flex; flex-direction: row; align-items: center;">
-                    <img style="height: 60px;" src="logo.png" alt="SISVET">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SISVET - Acesse sua conta</title>
+
+    <link rel="stylesheet" href="stylelogin.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo-sisvet">SISVET</div>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <div class="logo-area">
+
+                <div class="icone-pata">
+                    <i class="fa-solid fa-shield-dog"
+                       style="color: white; font-size: 24px;"></i>
                 </div>
-                <div style=" display: flex; flex-direction: column; line-height: 20px;">
-                    <h2>SISVET</h2>
-                    <p style="font-weight: bold;">Sistema integrado de Saúde Veterinária</p>
+
+                <div>
+                    <h1>SISVET</h1>
+                    <p>Sistema Integrado de Saúde Veterinária</p>
                 </div>
+
             </div>
-        </header>
-        <main class="container">
-            <div class="card">
-                <div class="logo-area">
-                    <div class="icone-pata">
-                        <div style="color: white; size: 10px;"><i class="fa-solid fa-shield-dog"></i></div>
-                    </div>
-                    <div>
-                        <h1>SISVET</h1>
-                        <p>Sistema Integrado de Saúde Veterinária</p>
-                    </div>
+
+            <h2>Acesse sua conta</h2>
+
+            <!-- Mensagens do sistema -->
+            <div id="mensagemErro"
+                 style="display:none; color:#B42318; background:#FEECEC;
+                border:1px solid #FDA29B; padding:12px; border-radius:6px;
+                margin-bottom:15px; font-size:13px;">
+            </div>
+
+            <form action="/sisvet/bd_conexao/php/login.php" method="POST" id="formLogin">
+
+                <input type="hidden" name="tipo" id="tipoUsuario">
+
+                <label for="email">E-mail</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                    autocomplete="email"
+                >
+
+                <label for="senha">Senha</label>
+
+                <div class="campo-senha">
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                        autocomplete="current-password"
+                    >
+
+                    <button
+                        class="olho"
+                        type="button"
+                        id="mostrarSenha"
+                        aria-label="Mostrar senha"
+                    >
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+
                 </div>
-                <h2>Acesse sua conta</h2>
-                <form>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail">
-                    <label for="senha">Senha</label>
-                    <div class="campo-senha">
-                        <input type="password" id="senha" placeholder="Digite sua senha">
-                        <button class="olho" type="button"><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="opcoes">
-                        <label class="lembrar">
-                            <input type="checkbox"> Lembrar de mim
-                        </label>
-                        <a href="#">Esqueci minha senha</a>
-                    </div>
-                    <button type="submit" class="btn-entrar">Entrar</button>
-                    <p class="cadastro">Não tem uma conta? <a href="#">Cadastre-se</a></p>
-                </form>
-            </div>
-            <div class="lado-direito">
-                <div class="pata-fundo pata-1"><i class="fa-solid fa-paw"></i></div>
-                <div class="pata-fundo pata-2"><i class="fa-solid fa-paw"></i></div>
-                <div class="texto-promo">
-                    <h3>Seu pet merece<br>o melhor cuidado.</h3>
-                    <p>Acesse sua conta e tenha<br>sempre à mão o histórico de<br>saúde do seu animal.</p>
+
+                <div class="opcoes">
+
+                    <label class="lembrar">
+                        <input type="checkbox" name="lembrar">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#">Esqueci minha senha</a>
+
                 </div>
+
+                <button type="submit" class="btn-entrar" id="btnEntrar">
+                    Entrar
+                </button>
+
+                <p class="cadastro">
+                    Não tem uma conta?
+                    <a href="#">Cadastre-se</a>
+                </p>
+
+            </form>
+
+        </div>
+
+        <div class="lado-direito">
+
+            <div class="pata-fundo pata-1">
+                <i class="fa-solid fa-paw"></i>
             </div>
-        </main>
-        <footer class="rodape">
-            <div class="rodape-esq">
-                <div class="brand-footer"><strong>SISVET</strong><span>Sistema Integrado de Saúde Veterinária</span></div>
+
+            <div class="pata-fundo pata-2">
+                <i class="fa-solid fa-paw"></i>
             </div>
-            <div><p class="copy">© 2024 - SISVET. Todos os direitos reservados.</p></div>
-            <div class="rodape-links">
-                <a href="#">Acessibilidade</a><span>|</span><a href="#">Termos de uso</a><span>|</span><a href="#">Privacidade</a>
+
+            <div class="texto-promo">
+
+                <h3>
+                    Seu pet merece<br>
+                    o melhor cuidado.
+                </h3>
+
+                <p>
+                    Acesse sua conta e tenha<br>
+                    sempre à mão o histórico de<br>
+                    saúde do seu animal.
+                </p>
+
             </div>
-        </footer>
-    </body>
+
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div>
+            <div class="logo-sisvet">SISVET</div>
+        </div>
+
+        <p class="copy">
+            © 2024 - SISVET. Todos os direitos reservados.
+        </p>
+
+        <div class="links">
+            <a href="#">Acessibilidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Privacidade</a>
+        </div>
+
+    </footer>
+
+    <script>
+
+        const parametros = new URLSearchParams(window.location.search);
+
+        const tipo = parametros.get("tipo");
+        const erro = parametros.get("erro");
+
+        const campoTipo = document.getElementById("tipoUsuario");
+        const mensagem = document.getElementById("mensagemErro");
+        const botao = document.getElementById("btnEntrar");
+
+        campoTipo.value = tipo || "";
+
+        function mostrarErro(texto) {
+            mensagem.textContent = texto;
+
+            // Força a exibição mesmo se o CSS estiver interferindo
+            mensagem.style.setProperty("display", "block", "important");
+        }
+
+        const erros = {
+            campos: "Preencha todos os campos.",
+            email: "Digite um e-mail válido.",
+            login: "E-mail ou senha incorretos.",
+            tipo: "Tipo de usuário inválido.",
+            servidor: "Erro interno no servidor.",
+            requisicao: "Solicitação inválida."
+        };
+
+        // Mostra erro enviado pelo PHP
+        if (erro) {
+            mostrarErro(erros[erro] || "Ocorreu um erro inesperado.");
+        }
+
+        // Verifica o tipo de usuário
+        const tiposValidos = [
+            "dono_clinica",
+            "veterinario",
+            "recepcionista",
+            "tutor",
+            "administrador"
+        ];
+
+        if (!tipo || !tiposValidos.includes(tipo)) {
+            mostrarErro("Nenhum tipo de usuário foi selecionado.");
+            botao.disabled = true;
+        }
+
+        // Mostrar e esconder senha
+        document.getElementById("mostrarSenha").addEventListener("click", function () {
+
+            const senha = document.getElementById("senha");
+            const icone = this.querySelector("i");
+
+            if (senha.type === "password") {
+                senha.type = "text";
+                icone.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                senha.type = "password";
+                icone.classList.replace("fa-eye-slash", "fa-eye");
+            }
+
+        });
+
+        // Evitar envio duplicado
+        document.getElementById("formLogin").addEventListener("submit", function () {
+            botao.disabled = true;
+            botao.textContent = "Entrando...";
+        });
+
+    </script>
+
+</body>
+
 </html>

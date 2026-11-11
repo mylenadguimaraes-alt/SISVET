@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISVET - Início Dono</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SAUDAÇÃO -->
+    <section class="saudacao">
+        <h1 id="saudacao-dono">Olá, dono!</h1>
+        <p>Acompanhe o estado de aprovação, funcionamento e contratos das suas clínicas cadastradas.</p>
+    </section>
+
+    <!-- CARTÕES DE RESUMO -->
+    <section class="cartoes">
+
+        <!-- CLÍNICAS EM ESPERA -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas em espera</h3>
+                    <p>Aguardando aprovação</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-espera">0</span>
+            </div>
+        </article>
+
+        <!-- CLÍNICAS AUTORIZADAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas autorizadas</h3>
+                    <p>Ativas no sistema</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-autorizadas">0</span>
+            </div>
+        </article>
+
+        <!-- CLÍNICAS SUSPENSAS -->
+        <article class="card">
+            <div class="card-cabecalho">
+                <div>
+                    <h3>Clínicas suspensas</h3>
+                    <p>Com acesso bloqueado</p>
+                </div>
+                <div class="card-icone">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+            </div>
+            <div class="card-rodape">
+                <span class="numero" id="quantidade-suspensas">0</span>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- BOAS-VINDAS -->
+    <section class="boas-vindas">
+        <span class="etiqueta">
+            <i class="fa-solid fa-hospital"></i>
+            Área do Dono da Clínica
+        </span>
+        <h1>Bem-vindo(a) à gestão de clínicas do SISVET!</h1>
+        <p>
+            Aqui você pode gerenciar o cadastro das suas clínicas, acompanhar o estado das vistorias,
+            controlar contratos ativos e aplicar suspensões administrativas caso alguma unidade infrinja as normas de conduta.
+        </p>
+    </section>
+
+    <!-- RECURSOS ADICIONADOS (FUNCIONALIDADES SOLICITADAS) -->
+    <h2 class="titulo-secao">Gerenciamento e Ações</h2>
+
+    <section class="recursos">
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-hospital-user"></i>
+            </div>
+            <div>
+                <h3>Cadastrar novas clínicas</h3>
+                <p>Adicione novas unidades veterinárias ao sistema preenchendo os dados de licença, vistorias e documentações exigidas.</p>
+            </div>
+        </article>
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <div>
+                <h3>Gerenciar contratos</h3>
+                <p>Acompanhe, renove ou encerre vínculos contratuais de profissionais e unidades associadas à sua gestão.</p>
+            </div>
+        </article>
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div>
+                <h3>Controle de suspensões</h3>
+                <p>Suspenda temporariamente ou definitivamente o acesso de clínicas caso ocorram irregularidades ou condutas inadequadas.</p>
+            </div>
+        </article>
+
+        <article class="recurso">
+            <div class="icone">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+                <h3>Auditoria e conformidade</h3>
+                <p>Monitore o histórico de relatórios e garanta que todas as unidades estejam operando sob os padrões de qualidade do SISVET.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- MENSAGEM FINAL -->
+    <section class="mensagem">
+        <h3>Gestão com responsabilidade e segurança!</h3>
+        <p>Mantenha o monitoramento ativo para assegurar que todas as clínicas e contratos cumpram as diretrizes estabelecidas.</p>
+    </section>
+
+    <!-- SCRIPT DA PÁGINA INICIAL DO IFRAME -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

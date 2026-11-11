@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Pet - PetCare</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="pagina">
+
+        <header class="cabecalho">
+            <h1>Cadastrar pet</h1>
+            <p>
+                Preencha as informações abaixo para adicionar
+                um novo animal à sua carteira PetCare.
+            </p>
+        </header>
+
+        <form id="formCadastrarPet"
+              class="formulario"
+              action="../../../../../../bd_conexao/php/cadastrar_pet.php"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <section class="secao">
+                <h2>Informações básicas</h2>
+                <p class="descricao-secao">
+                    Informe os principais dados do seu animal.
+                </p>
+
+                <div class="grade">
+                    <div class="campo">
+                        <label for="nome">Nome do pet *</label>
+                        <input type="text"
+                               id="nome"
+                               name="nome"
+                               maxlength="100"
+                               placeholder="Ex.: Thor"
+                               required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="especie">Espécie *</label>
+                        <select id="especie" name="especie" required>
+                            <option value="">Selecione a espécie</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Ave">Ave</option>
+                            <option value="Coelho">Coelho</option>
+                            <option value="Roedor">Roedor</option>
+                            <option value="Réptil">Réptil</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="raca">
+                            Raça <span class="opcional">(opcional)</span>
+                        </label>
+                        <input type="text"
+                               id="raca"
+                               name="raca"
+                               maxlength="100"
+                               placeholder="Ex.: Labrador">
+                    </div>
+
+                    <div class="campo">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo" name="sexo">
+                            <option value="Não informado">Não informado</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Fêmea">Fêmea</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data_nascimento">
+                            Data de nascimento
+                            <span class="opcional">(opcional)</span>
+                        </label>
+                        <input type="date"
+                               id="data_nascimento"
+                               name="data_nascimento">
+                    </div>
+
+                    <div class="campo">
+                        <label for="peso">
+                            Peso em kg
+                            <span class="opcional">(opcional)</span>
+                        </label>
+                        <input type="number"
+                               id="peso"
+                               name="peso"
+                               min="0.01"
+                               max="9999.99"
+                               step="0.01"
+                               placeholder="Ex.: 8.50">
+                    </div>
+
+                    <div class="campo">
+                        <label for="cor">
+                            Cor <span class="opcional">(opcional)</span>
+                        </label>
+                        <input type="text"
+                               id="cor"
+                               name="cor"
+                               maxlength="50"
+                               placeholder="Ex.: Caramelo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="porte">
+                            Porte <span class="opcional">(opcional)</span>
+                        </label>
+                        <select id="porte" name="porte">
+                            <option value="">Selecione o porte</option>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                            <option value="Gigante">Gigante</option>
+                            <option value="Não se aplica">Não se aplica</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao">
+                <h2>Identificação e cuidados</h2>
+                <p class="descricao-secao">
+                    Adicione informações importantes para a identificação
+                    e os cuidados do seu pet.
+                </p>
+
+                <div class="grade">
+                    <div class="campo campo-completo">
+                        <label for="microchip">
+                            Número do microchip
+                            <span class="opcional">(opcional)</span>
+                        </label>
+                        <input type="text"
+                               id="microchip"
+                               name="microchip"
+                               maxlength="50"
+                               placeholder="Digite o número, se houver">
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label>Castração</label>
+
+                        <div class="opcao-castrado">
+                            <input type="checkbox"
+                                   id="castrado"
+                                   name="castrado"
+                                   value="1">
+                            <label for="castrado">
+                                Meu pet é castrado
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="observacoes">
+                            Observações
+                            <span class="opcional">(opcional)</span>
+                        </label>
+                        <textarea id="observacoes"
+                                  name="observacoes"
+                                  placeholder="Informe alergias, características ou outras informações importantes..."></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao">
+                <h2>Foto do pet</h2>
+                <p class="descricao-secao">
+                    Se desejar, escolha uma foto para identificar seu animal.
+                </p>
+
+                <div class="campo campo-arquivo">
+                    <label for="foto">
+                        Selecionar foto
+                        <span class="opcional">(opcional)</span>
+                    </label>
+
+                    <input type="file"
+                           id="foto"
+                           name="foto"
+                           accept="image/*">
+
+                    <p class="ajuda">
+                        Selecione uma imagem do seu dispositivo.
+                    </p>
+                </div>
+            </section>
+
+            <div class="aviso">
+                Os campos marcados com * são obrigatórios.
+                Confira as informações antes de salvar.
+            </div>
+
+            <div class="acoes">
+                <a href="../../../../../../bd_conexao/php/pets_tutor.php" class="botao botao-voltar">
+                    Voltar
+                </a>
+
+                <button type="submit" id="botaoCadastrar" class="botao botao-salvar">
+                    Cadastrar pet
+                </button>
+            </div>
+
+            <p class="obrigatorio">
+                * Preenchimento obrigatório.
+            </p>
+
+        </form>
+    </main>
+
+    <!-- Script para desativar o botão ao submeter o formulário -->
+    <script>document.getElementById('formCadastrarPet').addEventListener('submit', function(event) {
+            const formulario = this;
+            const botao = document.getElementById('botaoCadastrar');
+
+            // Verifica se o formulário passou nas validações nativas do HTML5 (como campos 'required')
+            if (formulario.checkValidity()) {
+                // Desativa o botão para evitar múltiplos cliques
+                botao.disabled = true;
+                // Altera o texto para dar feedback visual ao usuário
+                botao.textContent = 'Cadastrando...';
+                // Opcional: altera a opacidade para indicar visualmente que está desativado
+                botao.style.opacity = '0.7';
+                botao.style.cursor = 'not-allowed';
+            }
+        });</script>
+</body>
+</html>

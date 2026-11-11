@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consultas do Dia - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../../img/logo.png">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="titulo-pagina">
+
+            <span class="identificacao">PAINEL DO VETERINÁRIO</span>
+
+            <h1>Consultas do dia</h1>
+
+            <p>
+                Consulte os atendimentos agendados para hoje na clínica.
+            </p>
+
+            <p id="dataAtual" class="data-atual"></p>
+
+        </header>
+
+
+        <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+
+
+        <section class="cartao">
+
+            <div class="cabecalho-cartao">
+
+                <div>
+                    <h2>Atendimentos de hoje</h2>
+
+                    <p class="descricao">
+                        Confira os dados dos tutores e seus animais.
+                    </p>
+                </div>
+
+                <button type="button" id="botaoAtualizar" class="botao-atualizar">
+                    Atualizar
+                </button>
+
+            </div>
+
+
+            <div class="barra-pesquisa">
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar por tutor, e-mail, animal, motivo ou horário..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <div class="resumo">
+
+                <div class="resumo-item">
+                    <span>Total de consultas</span>
+                    <strong id="totalConsultas">0</strong>
+                </div>
+
+                <div class="resumo-item">
+                    <span>Realizadas</span>
+                    <strong id="totalRealizadas">0</strong>
+                </div>
+
+                <div class="resumo-item">
+                    <span>A realizar</span>
+                    <strong id="totalPendentes">0</strong>
+                </div>
+
+            </div>
+
+
+            <div id="listaConsultas" class="lista-consultas">
+
+                <p class="estado-lista">
+                    Carregando consultas...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

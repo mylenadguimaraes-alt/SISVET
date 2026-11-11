@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Veterinário - SISVET</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="menu-lateral">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo SISVET">
+            <h2>SISVET</h2>
+        </div>
+
+        <nav class="menu">
+
+            <a href="pages/iframe/index.html"
+               target="conteudo"
+               class="menu-item ativo">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="pages/dados_pessoais/index.html"
+               target="conteudo"
+               class="menu-item ativo">
+                <i class="fa-solid fa-user"></i>
+                <span>Dados pessoais</span>
+            </a>
+
+            <a href="../../../../bd_conexao/php/clinicas_veterinario.php"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>Contratos das clínicas</span>
+            </a>
+
+            <a href="../../../../bd_conexao/php/entrar_clinica_veterinario.php"
+               target="conteudo"
+               class="menu-item">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Entrar na clínica</span>
+            </a>
+        </nav>
+
+        <div class="menu-rodape">
+            <a href="../../../../bd_conexao/php/encerrar.php" class="menu-item">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="area-principal">
+        <header class="cabecalho">
+            <div>
+                <h1>Painel do veterinário</h1>
+                <p>Bem-vinda ao SISVET</p>
+            </div>
+
+            <div class="perfil">
+                <i class="fa-solid fa-circle-user"></i>
+                <span id="nome">Veterinário</span>
+            </div>
+        </header>
+        <main class="conteudo">
+            <iframe
+                src="pages/iframe/index.html"
+                name="conteudo"
+                title="Conteúdo do painel"
+                class="iframe-conteudo">
+            </iframe>
+        </main>
+    </div>
+
+    <script src="js/iframe.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
