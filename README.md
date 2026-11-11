@@ -128,13 +128,5 @@ Em seguida, abra o navegador e acesse a URL local, geralmente:
 
 ---
 
-## 💡 Próximos Passos (Roadmap)
-- [ ] Implementação de recuperação de senha via email.
-- [ ] Geração de relatórios financeiros em PDF.
-- [ ] Sistema de notificações em tempo real (WhatsApp ou E-mail) para lembrar tutores das consultas.
-- [ ] Migração de componentes visuais repetitivos para templates dinâmicos em PHP.
-
----
-
 ## 📝 Licença e Autoria
 **© 2026 MiguellSouza, mylenadguimaraes, Viniciust98, HyagON11, respectivos autores originais. Todos os direitos reservados.**
